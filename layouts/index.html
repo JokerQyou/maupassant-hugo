@@ -1,0 +1,48 @@
+{{ partial "head" . }}
+
+<body>
+{{ partial "header" . }}
+
+<div id="body">
+    <div class="container">
+        <div class="col-group">
+
+            <div class="col-8" id="main">
+                <div class="res-cons">
+                    {{ range $index,$data := (where .Paginator.Pages "Type" "post") }}
+                        <article class="post">
+                            <header>
+                                <h2 class="post-title">
+                                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                </h2>
+                            </header>
+                            <date class="post-meta meta-date">
+                                {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日 {{ .Date.Hour }}:{{ .Date.Minute }}
+                            </date>
+                            {{ with .Params.Categories }}
+                            <div class="post-meta meta-category">
+                                ，归类于
+                                {{ range . }}
+                                    <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                                {{ end }}
+                            </div>
+                            {{ end }}
+                            <div class="post-content">
+                                {{ .Content | safeHTML | truncate 200 }}
+                                <a href="{{ .Permalink }}">阅读全文</a>
+                            </div>
+                        </article>
+                    {{ end }}
+
+                    {{ partial "paginator" . }}
+                </div>
+            </div>
+
+            {{ partial "sidebar" . }}
+        </div>
+    </div>
+</div>
+{{ partial "footer" . }}
+
+</body>
+</html>

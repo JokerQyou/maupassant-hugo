@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}zh-CN{{end}}">
+<head>
+
+    <meta charset="utf-8">
+    {{ .Hugo.Generator }}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{ if .IsHome -}}
+    <title>{{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:type" content="website">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    {{- else -}}
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+    <meta property="og:type" content="article">
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Title }}{{ end }}">
+        {{ if .Params.author -}}
+    <meta name="author" content="{{ .Params.author }}">
+        {{ else }}
+    <meta name="author" content="{{ index .Site.Author.name }}">
+        {{- end }}
+    {{- end }}
+    <meta property="og:url" content="{{ .Permalink }}">
+
+    <link rel="stylesheet" href="{{ "css/normalize.css" | relURL}}">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>

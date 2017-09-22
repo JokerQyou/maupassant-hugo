@@ -1,0 +1,36 @@
+<div id="secondary">
+    <section class="widget">
+        {{ partial "search_form" . }}
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+        <ul class="widget-list">
+            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+            <li>
+                <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+
+    {{ with .Site.Params.links }}
+    <section class="widget">
+        <h3 class="widget-title">友情链接</h3>
+        <ul class="widget-list">
+            {{ range . }}
+            <li>
+                <a rel="noreferrer noopener nofollow" href="{{ .url }}" title="{{ .title }}">{{ .name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="{{ "index.xml" | relURL }}">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
