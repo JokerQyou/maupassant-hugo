@@ -687,18 +687,19 @@ img.alignright {
     font-size: 17px;
 }
 .body404{
-    position: absolute;
     height: 100%;
     width: 100%;
-    background:#fff url(img/404.jpg)no-repeat center top;
+    /*background:#fff url(img/404.jpg) no-repeat center top;*/
+    background: #fff;
     background-size: cover;
+    margin: 4em 0 6em 0;
 }
 .site-name404 {
     margin: 0 auto;
     width: 3em;
     text-align: center;
     letter-spacing: 2px;
-    font:700 88px/1.2 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+    font-size: 74px;
 }
 .title404 span{
     font-size: 15px;
@@ -712,11 +713,8 @@ img.alignright {
     margin: 0.5em 0 .6em;
 }
 .info404{
-    position: absolute;
-    top: 50%;
     text-align: center;
     width: 100%;
-    margin-top: -160px;
 }
 #footer404{
     margin-top:30px;

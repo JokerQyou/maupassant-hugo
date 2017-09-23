@@ -1,6 +1,21 @@
 {{ partial "head" . }}
 
 <body>
-    404
+{{ partial "header" . }}
+<div class="body404">
+    <div class="info404">
+        <header id="header404" class="clearfix">
+            <div class="site-name404"><i>404</i></div>
+        </header>
+        <section>
+            <div class="title404">
+                <p>每一个平凡的日常<br/>都是连续发生中的奇迹</p>
+            </div>
+            <a rel="nofollow" href="{{ .Site.BaseURL }}" class="index404">回首页看看</a>
+        </section>
+    </div>
+</div>
+{{ partial "footer" . }}
+
 </body>
 </html>
