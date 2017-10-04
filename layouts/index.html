@@ -17,7 +17,8 @@
                                 </h2>
                             </header>
                             <date class="post-meta meta-date">
-                                {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日 {{ .Date.Hour }}:{{ .Date.Minute }}
+                                {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
+                                {{ printf "%02d" .Date.Hour }}:{{ printf "%02d" .Date.Minute }}
                             </date>
                             {{ with .Params.Categories }}
                             <div class="post-meta meta-category">
