@@ -111,7 +111,7 @@ code {
 }
 blockquote {
     display: block;
-    margin: 0;
+    margin: 1.1em 0;
     padding: 1.5em 2em .5em 2em;
     border: 1px dashed #ddd;
     border-left: 0.5em solid #ddd;
