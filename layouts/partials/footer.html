@@ -5,3 +5,7 @@
         Theme based on <a rel="nofollow noreferer noopener" href="https://github.com/pagecho/maupassant">maupassant</a>.
     </div>
 </footer>
+
+{{ if .IsPage }}
+<script type="text/javascript" src="{{ "js/prism.js" | relURL}}" async="true"></script>
+{{ end }}

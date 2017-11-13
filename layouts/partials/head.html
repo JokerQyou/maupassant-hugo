@@ -32,5 +32,8 @@
     <meta property="og:url" content="{{ .Permalink }}">
 
     <link rel="stylesheet" href="{{ "css/normalize.css" | relURL}}">
+    {{ if .IsPage }}
+    <link rel="stylesheet" href="{{ "css/prism.css" | relURL }}">
+    {{ end }}
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 </head>
