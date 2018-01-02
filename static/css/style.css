@@ -444,16 +444,16 @@ textarea {
     margin-top:-1px;
 }
 .comment-list li {
-    padding:22px 0 0;
+    padding:22px 0 12px;
     border-top:1px solid #ddd;
 }
 .comment-list li.comment-level-even {
     background:#FFF;
 }
-.comment-list li .comment-reply {
-    float:right;
-    margin-top:-39px;
-    font-size:.92857em;
+.comment-list li .comment-index {
+    float: right;
+    font-size: .92857em;
+    font-style: italic;
 }
 .comment-list li .comment-children {
     margin-left: 1em;
@@ -492,10 +492,11 @@ textarea {
     border:none;
     margin:0 0 25px;
 }
-.respond .cancel-comment-reply {
-    float:right;
-    margin-top:15px;
-    font-size:.92857em;
+.comment-content p:first-child {
+    margin-top: 0;
+}
+.comment-content p:last-child {
+    margin-bottom: 0;
 }
 #comment-form {
     padding-top:5px;
@@ -523,6 +524,7 @@ button.submit {
     color: #fff;
     background:#272727;
     height: 38px;
+    border-radius: 0;
 }
 button.submit:hover {
     background:#505050;
