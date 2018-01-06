@@ -515,6 +515,9 @@ textarea {
     padding-left:45px;
     color: #555;
 }
+button {
+    border-radius: 0;
+}
 button.submit {
     border:1px solid #272727;
     display:block;
@@ -524,7 +527,6 @@ button.submit {
     color: #fff;
     background:#272727;
     height: 38px;
-    border-radius: 0;
 }
 button.submit:hover {
     background:#505050;
@@ -868,6 +870,6 @@ img.alignright {
     max-width: 100%;
 }
 .post-donation-qrcode p {
-    margin: -.5em auto auto auto;
+    margin: 0 auto auto auto;
     font-size: 85%;
 }
