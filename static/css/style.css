@@ -873,3 +873,14 @@ img.alignright {
     margin: 0 auto auto auto;
     font-size: 85%;
 }
+/** Comment extra **/
+#comment-submitted {
+    border-top: 1px solid #ddd;
+    background: rgba(245, 245, 245, 1);
+    padding-bottom: 1px;
+    text-align: center;
+    display: none;
+}
+#comment-submitted:target {
+    display: block;
+}
