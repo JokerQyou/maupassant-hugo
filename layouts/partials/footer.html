@@ -2,10 +2,16 @@
     <div class="container">
         &copy; 2018 <a rel="nofollow" href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }}</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io">Hugo</a>.
-        <a rel="nofollow noreferer noopener" href="https://github.com/JokerQyou/maupassant-hugo">Theme</a> based on <a rel="nofollow noreferer noopener" href="https://github.com/pagecho/maupassant">maupassant</a>.
+        <a href="http://www.flysnow.org/">Theme</a> based on <a rel="nofollow noreferer noopener" href="https://github.com/rujews/maupassant-hugo">maupassant</a>.
+        {{ if .Site.Params.showHostPage}}
+        Hosted by <a rel="nofollow noreferer noopener" href="https://pages.coding.me">Coding Pages</a>.
+        {{ end }}
     </div>
 </footer>
 
 {{ if .IsPage }}
 <script type="text/javascript" src="{{ "js/prism.js" | relURL}}" async="true"></script>
 {{ end }}
+<a id="rocket" href="#top" class="show"></a>
+<script type="text/javascript" src="{{ "js/totop.js?v=0.0.0" | relURL }}" async=""></script>
+{{ template "_internal/google_analytics_async.html" . }}

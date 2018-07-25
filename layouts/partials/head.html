@@ -8,12 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{ if .IsHome -}}
-    <title>{{ .Site.Title }}</title>
-    <meta property="og:title" content="{{ .Site.Title }}">
+    <title>{{ .Site.Title }} | {{ .Site.Params.subtitle}}</title>
+    <meta property="og:title" content="{{ .Site.Title }} | {{ .Site.Params.subtitle}}">
     <meta property="og:type" content="website">
+    <meta name="Keywords" content="{{.Site.Params.keywords}}">
     <meta name="description" content="{{ .Site.Params.description }}">
     {{- else -}}
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
     <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
     <meta property="og:type" content="article">
         {{ with .Params.date }}
@@ -22,6 +23,7 @@
         {{ with .Params.lastmod }}
     <meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05+08:00" }}">
         {{ end }}
+    <meta name="Keywords" content="{{ if .Keywords }}{{ .Keywords }}{{ else }}{{ .Site.Params.keywords }}{{ end }}">
     <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Title }}{{ end }}">
         {{ if .Params.author -}}
     <meta name="author" content="{{ .Params.author }}">
@@ -30,10 +32,15 @@
         {{- end }}
     {{- end }}
     <meta property="og:url" content="{{ .Permalink }}">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="{{ "css/normalize.css" | relURL}}">
     {{ if .IsPage }}
     <link rel="stylesheet" href="{{ "css/prism.css" | relURL }}">
     {{ end }}
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>

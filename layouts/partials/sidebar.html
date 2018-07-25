@@ -2,17 +2,37 @@
     <section class="widget">
         {{ partial "search_form" . }}
     </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+        <ul class="widget-list">
+            {{ range first 10 (where .Site.Pages "Type" "post") }}
+            <li>
+                <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
 
     <section class="widget">
         <h3 class="widget-title">分类</h3>
         <ul class="widget-list">
             {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
             <li>
-                <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+                <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}({{len $taxonomy}})</a>
             </li>
             {{ end }}
         </ul>
     </section>
+
+    <section class="widget">
+            <h3 class="widget-title">标签</h3>
+            <div class="tagcloud">
+                {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
+                {{ end }}
+            </div>
+        </section>
 
     {{ with .Site.Params.links }}
     <section class="widget">
