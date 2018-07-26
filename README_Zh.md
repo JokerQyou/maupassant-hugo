@@ -21,6 +21,7 @@ Maupassant theme, ported to Hugo.
 8. 支持文章按年份日期进行归档
 9. 支持GA分析统计
 10. 支持关键字SEO优化
+11. 代码高亮
 
 ## 下载安装
 
