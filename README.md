@@ -1,7 +1,8 @@
 # Maupassant
 Maupassant theme, ported to Hugo.
 
-[Preview](http://www.flysnow.com)｜[中文文档](README_Zh.md)
+1. Preview: [flysnow blog](http://www.flysnow.org)
+2. [中文文档](README_Zh.md)
 
 A simple Hugo template with great performance on different devices, ported from a Typecho theme by [Cho](https://github.com/pagecho/maupassant/), forked and modified from [JokerQyou](https://github.com/JokerQyou/maupassant-hugo).
 
