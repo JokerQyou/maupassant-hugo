@@ -28,6 +28,8 @@
                             {{ .Content }}
                         </div>
 
+                        {{ partial "related" . }}
+
                         <div class="post-meta meta-tags">
                             {{ if and (isset .Params "tags") .Params.tags }}
                             <ul class="clearfix">
@@ -39,16 +41,6 @@
                             没有标签
                             {{ end }}
                         </div>
-                        {{ if eq .Type "post" }}
-                        <div class="post-nav">
-                            {{if .NextInSection}}
-                            <a href="{{.NextInSection.Permalink}}" class="pre">{{.NextInSection.Title}}</a>
-                            {{end}}
-                            {{if .PrevInSection}}
-                            <a href="{{.PrevInSection.Permalink}}" class="next">{{.PrevInSection.Title}}</a>
-                            {{end}}
-                        </div>
-                        {{ end }}
                     </article>
                     {{ partial "comments" . }}
                 </div>

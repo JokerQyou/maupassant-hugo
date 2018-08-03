@@ -88,6 +88,12 @@ theme = "maupassant"
 googleAnalytics = "GA ID"
 ```
 
+#### Disqus
+
+```toml
+disqusShortname = "yourdiscussshortname"
+```
+
 ## Contributing
 
 All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.

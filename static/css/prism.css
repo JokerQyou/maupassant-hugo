@@ -1,5 +1,5 @@
 /* PrismJS 1.15.0
-https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+c+bash+cpp+coffeescript+ruby+diff+docker+markup-templating+erlang+git+go+groovy+less+haskell+java+json+kotlin+markdown+lua+makefile+nginx+objectivec+php+python+r+swift+yaml+vim&plugins=line-numbers+highlight-keywords */
+https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript+c+csharp+bash+basic+cpp+coffeescript+clojure+ruby+diff+docker+markup-templating+erlang+git+go+groovy+less+haskell+java+json+kotlin+markdown+lua+makefile+nginx+objectivec+perl+php+php-extras+sql+python+r+jsx+typescript+rust+scala+plsql+swift+yaml+tsx+vbnet+vim&plugins=highlight-keywords */
 /**
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
@@ -225,46 +225,4 @@ pre[data-line] code {
 pre .line-highlight {
 	margin-top: 0;
 }
-
-pre[class*="language-"].line-numbers {
-	position: relative;
-	padding-left: 3.8em;
-	counter-reset: linenumber;
-}
-
-pre[class*="language-"].line-numbers > code {
-	position: relative;
-	white-space: inherit;
-}
-
-.line-numbers .line-numbers-rows {
-	position: absolute;
-	pointer-events: none;
-	top: 0;
-	font-size: 100%;
-	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
-	letter-spacing: -1px;
-	border-right: 1px solid #999;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-
-}
-
-	.line-numbers-rows > span {
-		pointer-events: none;
-		display: block;
-		counter-increment: linenumber;
-	}
-
-		.line-numbers-rows > span:before {
-			content: counter(linenumber);
-			color: #999;
-			display: block;
-			padding-right: 0.8em;
-			text-align: right;
-		}
 

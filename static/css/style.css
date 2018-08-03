@@ -368,11 +368,11 @@ textarea {
 .post-content h3,.post-content h2{
     margin: 1.4em 0 1.1em;
 }
-.post-content pre, .comment-content pre {
+/* .post-content pre, .comment-content pre {
     max-height: 320px;
-}
+} */
 .post-content pre, .comment-content pre {
-    padding: 1.5em 2em;
+    padding: 1em 1.5em;
 }
 .post-content p code, .comment-content p code {
     display:inline;
@@ -895,42 +895,6 @@ img.alignright {
 }
 #comment-submitted:target {
     display: block;
-}
-
-/* post navigator*/
-.post-nav {
-    overflow: hidden;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    padding: 10px;
-    white-space: nowrap;
-    border-top: 1px solid #eee;
-}
-.post-nav a {
-    display: inline-block;
-    line-height: 25px;
-    font-size: 15px;
-    color: #555;
-    border-bottom: none;
-    float: left; 
-}
-.post-nav a.pre {
-    float: left; 
-}
-.post-nav a.pre:before {
-    content: "\ea23";
-    padding-right: 0.3em; 
-}
-.post-nav a.next {
-    float: right; 
-}
-.post-nav a.next:after {
-    content: "\ea24";
-    padding-left: 0.3em; 
-}
-.post-nav a:hover {
-    border-bottom: none;
-    color: #222; 
 }
 
 /* for archive page starts*/

@@ -21,8 +21,13 @@ Maupassant theme, ported to Hugo.
 7. 自定义友情链接支持
 8. 支持文章按年份日期进行归档
 9. 支持GA分析统计
-10. 支持关键字SEO优化
+10. sitemap站点地图
 11. 代码高亮
+12. 404错误页
+13. 支持关键字SEO优化
+14. Google站内搜索
+15. See Also 支持
+16. Disqus评论支持
 
 ## 下载安装
 
@@ -120,6 +125,16 @@ type: archives
 `title`和`description`都可以换成你自己的，但是`type`必须是`archives`。
 
 `content/archives/index.md`表示在`content/archives/`目录下的`index.md`文件
+
+#### Disqus
+
+该支持主持Disqus评论，如果要启用Disqus，可以在`config.toml`里添加如下配置即可.
+
+```toml
+disqusShortname = "yourdiscussshortname"
+```
+
+替换成你自己的Disqus名字即可。
 
 #### 禁止分类的名称转为小写
 
