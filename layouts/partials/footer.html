@@ -3,7 +3,7 @@
         &copy; 2018 <a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }}</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io">Hugo</a>.
         <a href="http://www.flysnow.org/">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo">maupassant</a>.
-        {{ if .Site.Params.showHostPage}}
+        {{ if .Site.Params.showHostPage }}
         Hosted by <a rel="nofollow noreferer noopener" href="https://pages.coding.me">Coding Pages</a>.
         {{ end }}
     </div>
@@ -15,3 +15,7 @@
 <a id="rocket" href="#top" class="show"></a>
 <script type="text/javascript" src="{{ "js/totop.js?v=0.0.0" | relURL }}" async=""></script>
 {{ template "_internal/google_analytics_async.html" . }}
+
+{{ if .Site.Params.busuanzi }}
+<script type="text/javascript" src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+{{ end }}

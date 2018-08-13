@@ -28,6 +28,7 @@ Maupassant theme, ported to Hugo.
 14. Google站内搜索
 15. See Also 支持
 16. Disqus评论支持
+17. 不蒜子页面计数器支持
 
 ## 下载安装
 
@@ -128,10 +129,19 @@ type: archives
 
 #### Disqus
 
-该支持主持Disqus评论，如果要启用Disqus，可以在`config.toml`里添加如下配置即可.
+该主题支持Disqus评论，如果要启用Disqus，可以在`config.toml`里添加如下配置即可.
 
 ```toml
 disqusShortname = "yourdiscussshortname"
+```
+
+#### 不蒜子页面计数器支持
+
+该主题支持不蒜子这个极简的页面计数器支持，如果要启用不蒜子，可以在`config.toml`里添加如下配置即可.
+
+```toml
+[params]
+  busuanzi = true
 ```
 
 替换成你自己的Disqus名字即可。

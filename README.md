@@ -94,6 +94,13 @@ googleAnalytics = "GA ID"
 disqusShortname = "yourdiscussshortname"
 ```
 
+#### Page View Support
+
+```toml
+[params]
+  busuanzi = true
+```
+
 ## Contributing
 
 All kinds of contributions (enhancements, new features, documentation & code improvements, issues & bugs reporting) are welcome.

@@ -970,3 +970,18 @@ img.alignright {
         transform: scale(1.4, 3.2); 
     } 
 }
+
+/* read more*/
+.readmore a {
+    font-size: 14px;
+    color: #444;
+    margin: -10px 0;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    float: right; 
+}
+.readmore a:hover {
+    background: #F8F8F8;
+    border-bottom-color: #D26911; 
+}

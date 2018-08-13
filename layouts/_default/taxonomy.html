@@ -26,9 +26,9 @@
                     {{ range $index,$data := (where .Paginator.Pages "Type" "post") }}
                         <article class="post">
                             <header>
-                                <h2 class="post-title">
+                                <h1 class="post-title">
                                     <a href="{{ .Permalink }}">{{ .Title }}</a>
-                                </h2>
+                                </h1>
                             </header>
                             <date class="post-meta meta-date">
                                 {{ .Date.Year }}年{{ printf "%d" .Date.Month }}月{{ .Date.Day }}日
@@ -43,8 +43,8 @@
                             </div>
                             {{ end }}
                             <div class="post-content">
-                                {{ .Content | markdownify | truncate 200 }}
-                                <a href="{{ .Permalink }}">阅读全文</a>
+                                {{ .Content | markdownify | truncate 180 }}
+                                <p class="readmore"><a href="{{ .Permalink }}">阅读全文</a></p>
                             </div>
                         </article>
                     {{ end }}
