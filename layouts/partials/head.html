@@ -31,6 +31,10 @@
     {{- end }}
     <meta property="og:url" content="{{ .Permalink }}">
 
+    {{ range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
+    {{ end -}}
+
     <link rel="stylesheet" href="{{ "css/normalize.css" | relURL}}">
     {{ if .IsPage }}
     <link rel="stylesheet" href="{{ "css/prism.css" | relURL }}">
