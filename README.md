@@ -67,10 +67,10 @@ The `[author]` block is for fallback use only. If a post has `author: "My Name"`
 
 The navigation tabs is on the top right area of the screen. The only default tab is "Home". To add more tabs, just add corresponding `[[menu.main]]` blocks in your site config.
 
-The sample config contains additional tabs: one points to `/gpg-public-key/` and the other `/about/`. You can add any page as a menu entry, even if it points to an external URL.
+The sample config contains two additional tabs: one points to `/gpg-public-key/` and the other `/about/`. You can add any page as a menu entry, even if it points to an external URL.
 
 - The only constraint is that each menu's `identifier` field must be unique.
-- `weight` field is used to sort menu entries, it must be an integer. Menu entries are sorted in ascending.
+- `weight` field is used to sort menu entries, it must be an integer. Menu entries are sorted in ascending order.
 
 # Analytics
 
