@@ -18,9 +18,9 @@
             <div>
                 <nav id="nav-menu" class="clearfix">
                     <a {{ if or (.IsHome) (eq .Type "post") }}class="current"{{ end }} href="{{ .Site.BaseURL | absURL }}">博客</a>
-                    {{ range $index,$data := (where .Site.Pages "Type" "standalone") }}
-                    <a {{ if eq .Permalink $.Permalink }}class="current"{{ end }} href="{{ .Permalink }}" title="{{ .Title }}">
-                        {{ .Title }}
+                    {{ range .Site.Menus.main }}
+                    <a {{ if eq .URL $.RelPermalink }}class="current"{{ end }} href="{{ .URL | absURL }}" title="{{ .Name }}">
+                        {{ .Name }}
                     </a>
                     {{ end }}
                 </nav>
