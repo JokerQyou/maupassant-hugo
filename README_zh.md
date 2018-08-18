@@ -60,8 +60,6 @@ PaginatePath = "page"
 - 唯一的限制是，不同导航菜单的 `identifier` 值必须不同。
 - `weight` 字段用于菜单的排序，值必须是数字。`weight` 较小的菜单排在前面。
 
-The sample config contains additional tabs: one points to `/gpg-public-key/` and the other `/about/`. You can add any page as a menu entry, even if it points to an external URL. The only constraint is that each menu's `identifier` field must be unique.
-
 # 统计分析
 
 在移植这个主题之前，我一直是矛盾的。作为一个读者 / 普通的因特网用户，因为隐私的缘故痛恨访问追踪和统计分析脚本；但作为一个博客的作者，却总是在使用最新、最准确的统计分析和追踪产品。
