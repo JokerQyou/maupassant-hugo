@@ -8,7 +8,9 @@
         <ul class="widget-list">
             {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
             <li>
-                <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+                <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">
+                    {{ $name }} ({{ len $taxonomy }})
+                </a>
             </li>
             {{ end }}
         </ul>
