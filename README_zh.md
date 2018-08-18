@@ -33,10 +33,11 @@ PaginatePath = "page"
 
 ## 基本配置
 
-`baseURL` 用于设置博客的基准地址，所有其他永久地址都基于这个设置进行计算。
-使用 `theme = "maupassant-hugo"` 来启用这个主题。
-`title` 用于设置博客的标题。
-`[params]` 中的 `description` 参数，用于设置显示在博客标题下方的一句描述语。在某些主题中，这个描述语被称为 `subtitle`。
+- `baseURL` 用于设置博客的基准地址，所有其他永久地址都基于这个设置进行计算。
+- 使用 `theme = "maupassant-hugo"` 来启用这个主题。
+- `title` 用于设置博客的标题。
+- `[params]` 中的 `description` 参数，用于设置显示在博客标题下方的一句描述语。在某些主题中，这个描述语被称为 `subtitle`。
+- 设置中的 `[[menu.main]]` 区块用于设置顶部导航菜单。见下文中的详细说明。
 
 ## 友情链接
 
@@ -49,6 +50,17 @@ PaginatePath = "page"
 ## 作者信息
 
 `[author]` 块用于设置文章作者的默认信息。如果文章的属性区块中有设置作者（一般是在 front matter 中书写：`author: "小明"`），则会使用文章中设置的值。如果文章没有作者信息，那么将会使用此处设置的作者信息。
+
+## 导航菜单
+
+导航菜单使用 Hugo 的菜单功能实现。导航区域位于页面右上方。默认有一个导航 tab 叫「首页」。只需如示例一样格式，添加更多的 `[[menu.main]]` 设置块，即可添加更多的导航 tab。
+
+上文的配置示例中就添加了两个导航 tab。其中一个指向博客的 `/gpg-public-key/`，另一个指向 `/about/`。你可以添加任意多的导航 tab，链接地址也不限于站内。
+
+- 唯一的限制是，不同导航菜单的 `identifier` 值必须不同。
+- `weight` 字段用于菜单的排序，值必须是数字。`weight` 较小的菜单排在前面。
+
+The sample config contains additional tabs: one points to `/gpg-public-key/` and the other `/about/`. You can add any page as a menu entry, even if it points to an external URL. The only constraint is that each menu's `identifier` field must be unique.
 
 # 统计分析
 
