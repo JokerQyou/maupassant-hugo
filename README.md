@@ -3,6 +3,16 @@ Maupassant theme, ported to Hugo.
 
 [中文文档](README_zh.md)
 
+# Installation
+
+Clone this repository inside `themes` directory of your Hugo site:
+
+```shell
+git clone https://github.com/JokerQyou/maupassant-hugo.git
+```
+
+Then add `theme = "maupassant-hugo"` to your site config (`config.toml`). Read ahead for a complete sample config file.
+
 # Configuration
 
 A simple sample:
@@ -82,7 +92,7 @@ The sample config contains three additional tabs: one points to `/gpg-public-key
 
 To enable the archive list page (located at `/archives/`), you need to create `index.md` file inside your site's `content/archives` folder. Fill this file with following content:
 
-```toml
+```markdown
 ---
 title: "Archives"
 type: "archives"

@@ -3,6 +3,16 @@
 
 [English Docs](README.md)
 
+# 安装
+
+在你的 Hugo 站点的 `themes` 目录中，clone 这个仓库：
+
+```shell
+git clone https://github.com/JokerQyou/maupassant-hugo.git
+```
+
+然后将 `theme = "maupassant-hugo"` 加入你的站点配置文件（`config.toml`）。下文中有一份完整的配置文件示例。
+
 # 配置
 
 简单的配置示例:
@@ -82,7 +92,7 @@ PaginatePath = "page"
 
 在你博客的 `content/archives` 目录下建立一个 `index.md`，填充如下内容，即可激活存档列表页面（位于 `/archives/`）。
 
-```toml
+```markdown
 ---
 title: "Archives"
 type: "archives"
