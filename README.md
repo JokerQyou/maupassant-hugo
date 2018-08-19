@@ -35,10 +35,16 @@ PaginatePath = "page"
     weight = 1
 
 [[menu.main]]
+    identifier = "archives"
+    name = "存档"
+    url = "/archives/"
+    weight = 3
+
+[[menu.main]]
     identifier = "about"
     name = "关于"
     url = "/about/"
-    weight = 3
+    weight = 4
 ```
 
 The above configuration was excerpted from my blog.
@@ -65,15 +71,42 @@ The `[author]` block is for fallback use only. If a post has `author: "My Name"`
 
 ## Menus
 
-The navigation tabs is on the top right area of the screen. The only default tab is "Home". To add more tabs, just add corresponding `[[menu.main]]` blocks in your site config.
+The navigation tabs is on the top right area of the screen. The only default tab is "Home". To add more tabs, just add corresponding `[[menu.main]]` blocks in your site config. You can add any page as a menu entry, even if it points to an external URL.
 
-The sample config contains two additional tabs: one points to `/gpg-public-key/` and the other `/about/`. You can add any page as a menu entry, even if it points to an external URL.
+The sample config contains three additional tabs: one points to `/gpg-public-key/` and the other `/about/`, the last points to `/archives/` which is an archive list page.
 
 - The only constraint is that each menu's `identifier` field must be unique.
 - `weight` field is used to sort menu entries, it must be an integer. Menu entries are sorted in ascending order.
+
+## Archive list
+
+To enable the archive list page (located at `/archives/`), you need to create `index.md` file inside your site's `content/archives` folder. Fill this file with following content:
+
+```toml
+---
+title: "Archives"
+type: "archives"
+---
+```
+
+Please note that `type: "archives"` is mandatory, the `type` must be `archives`.
 
 # Analytics
 
 As a reader / user of the Internet I hate tracking, because we deserve privacy. But as a blogger I was always trying out for new and more accurate tracking / analytics product.
 
 At last I decided to let go. I want my readers to have privacy. Other Hugo themes (or Hugo itself) might have Google Analytics or other analytics product integrated. But I decided not to use them by default. That's why this theme **by default** does not track you.
+
+# Credits
+
+Special thanks to [飞雪无情][rujews_github] for the following features:
+
+- Post count in category list;
+- RSS alternate link in `<head>`;
+- Navigation with Hugo menu;
+- Archive list;
+
+He also maintains a fork of this theme with some other features [here][flysnow_maupassant_hugo_github].
+
+[rujews_github]: https://github.com/rujews
+[flysnow_maupassant_hugo_github]: https://github.com/rujews/maupassant-hugo
