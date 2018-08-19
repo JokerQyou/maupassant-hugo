@@ -396,7 +396,8 @@ textarea {
     text-indent: .5em;
 }
 .archive-title {
-    padding-top:20px;
+    margin-left: 1em;
+    line-height: 1.5;
     color:#999;
     font-size:1em;
 }
