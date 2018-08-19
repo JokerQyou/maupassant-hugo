@@ -22,7 +22,7 @@
                             </date>
                             {{ with .Params.Categories }}
                             <div class="post-meta meta-category">
-                                ，归类于
+                                |
                                 {{ range . }}
                                     <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
                                 {{ end }}
