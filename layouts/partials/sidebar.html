@@ -6,7 +6,7 @@
     <section class="widget">
         <h3 class="widget-title">最近文章</h3>
         <ul class="widget-list">
-            {{ range first 10 (where .Site.Pages "Type" "post") }}
+            {{ range first 10 (where (where .Site.Pages "Type" "post") "Kind" "page") }}
             <li>
                 <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
             </li>
