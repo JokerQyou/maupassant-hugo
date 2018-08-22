@@ -369,9 +369,7 @@ textarea {
     margin: 1.4em 0 1.1em;
 }
 .post-content pre, .comment-content pre {
-    max-height: 320px;
-}
-.post-content pre, .comment-content pre {
+    max-height: 460px;
     padding: 1.5em 2em;
 }
 .post-content p code, .comment-content p code {
