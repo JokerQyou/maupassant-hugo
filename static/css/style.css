@@ -920,6 +920,7 @@ img.alignright {
     font-size: 1.1em;
     text-align: center;
     display: block;
+    margin-bottom: 10px;
 }
 #toc.dismissed .toc-dismiss:before {
     content: '[\663e\793a]';
