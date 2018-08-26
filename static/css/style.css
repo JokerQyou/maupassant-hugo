@@ -901,6 +901,9 @@ img.alignright {
     margin: 1.6em 1em 0 1em;
     padding: 1em;
 }
+#toc nav {
+    margin-top: 10px;
+}
 #toc ul {
     margin: 0 0 0 1.2em;
     padding: 0;
@@ -920,7 +923,6 @@ img.alignright {
     font-size: 1.1em;
     text-align: center;
     display: block;
-    margin-bottom: 10px;
 }
 #toc.dismissed .toc-dismiss:before {
     content: '[\663e\793a]';
