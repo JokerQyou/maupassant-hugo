@@ -24,6 +24,10 @@
                             {{ end }}
                         </div>
                         {{ end }}
+                        <aside id="toc" class="dismissed">
+                            <span class="toc-title">目录 <a href="#" class="toc-dismiss"></a></span>
+                            {{ .TableOfContents }}
+                        </aside>
                         <div class="post-content">
                             {{ .Content }}
                         </div>
