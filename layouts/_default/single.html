@@ -24,10 +24,12 @@
                             {{ end }}
                         </div>
                         {{ end }}
+                        {{- if .TableOfContents -}}
                         <aside id="toc" class="dismissed">
                             <span class="toc-title">目录 <a href="#" class="toc-dismiss"></a></span>
                             {{ .TableOfContents }}
                         </aside>
+                        {{- end -}}
                         <div class="post-content">
                             {{ .Content }}
                         </div>
