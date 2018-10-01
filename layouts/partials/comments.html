@@ -1,1 +1,15 @@
-{{ template "_internal/disqus.html" . }}
+{{ if and .IsPage (ne .Params.comment false) }}
+    {{ template "_internal/disqus.html" . }}
+
+    <!-- utteranc -->
+    {{ if .Site.Params.utteranc.enable }}
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "{{ .Site.Params.utteranc.repo }}"
+            issue-term="{{ .Site.Params.utteranc.issueTerm }}"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    {{ end }}
+{{- end }}
