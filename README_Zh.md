@@ -29,6 +29,9 @@ Maupassant theme, ported to Hugo.
 15. See Also 支持
 16. Disqus评论支持
 17. 不蒜子页面计数器支持
+18. 自定义css、js
+19. utteranc评论
+20. 部分自定义的shortcode
 
 ## 下载安装
 
