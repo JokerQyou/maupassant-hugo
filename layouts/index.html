@@ -9,7 +9,7 @@
 
             <div class="col-8" id="main">
                 <div class="res-cons">
-                    {{ range $index,$data := (where .Paginator.Pages "Type" "post") }}
+                    {{ range $index,$data := (where .Paginator.Pages "Type" "in" (slice "post" "posts")) }}
                         <article class="post">
                             <header>
                                 <h1 class="post-title">
