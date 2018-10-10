@@ -29,6 +29,9 @@ Maupassant theme, ported to Hugo.
 15. See Also 支持
 16. Disqus评论支持
 17. 不蒜子页面计数器支持
+18. 自定义css、js
+19. utteranc评论
+20. 部分自定义的shortcode
 
 ## 下载安装
 
@@ -135,6 +138,17 @@ type: archives
 disqusShortname = "yourdiscussshortname"
 ```
 
+#### utteranc
+
+该主题支持utteranc评论，可以在`config.toml`里添加如下配置即可.
+
+```toml
+[params.utteranc]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es
+    enable = true
+    repo = ""    # The repo to store comments
+    issueTerm = "pathname"
+```
+
 #### 不蒜子页面计数器支持
 
 该主题支持不蒜子这个极简的页面计数器支持，如果要启用不蒜子，可以在`config.toml`里添加如下配置即可.
@@ -165,6 +179,32 @@ preserveTaxonomyNames = true
 ## 是否禁止URL Path转小写
 disablePathToLower = true
 ```
+
+#### 自定义CSS&JS
+
+详见：http://www.xianmin.org/post/hugo-shortcode-douban-item/
+
+```
+[params]
+  # 这里我存放在了主题的static文件夹里，根目录的似乎也可以
+  customCSS = ['douban.css', 'other.css']
+  # if ['custom.css'], load '/static/css/custom.css' file
+  customJS = ['douban.js']
+  # if ['custom.js'], load '/static/js/custom.js' file
+```
+
+#### 添加了部分自定义的shortcode
+
+https://github.com/parsiya/Hugo-Shortcodes
+
+* Octopress blockquote (blockquote.html)
+* Wikipedia Link Generator (wp.html)
+
+```
+{{< youku id="_XMzcxODQ2NjM2NA==" autoplay="true" >}}
+```
+
+* youku（youku.html）
 
 ## 贡献
 
