@@ -140,14 +140,22 @@ disqusShortname = "yourdiscussshortname"
 
 #### utteranc
 
-该主题支持utteranc评论，可以在`config.toml`里添加如下配置即可.
+该主题支持utteranc评论，这是一个基于Github  Issue的评论系统，使用方便，不用翻墙即可评论。
+可以在`config.toml`里添加如下配置即可.更多详见 [https://utteranc.es](https://utteranc.es)
 
 ```toml
-[params.utteranc]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es
+[params.utteranc]
     enable = true
-    repo = ""    # The repo to store comments
-    issueTerm = "pathname"
+    repo = ""    # 存储评论的Repo，格式为 owner/repo
+    issueTerm = "pathname"  #表示你选择以那种方式让github issue的评论和你的文章关联。
+    theme = "github-light" # 样式主题，有github-light和github-dark两种
 ```
+对于以上issueTerm可以选择的配置有
+1. `pathname` 以路径的方式，推荐选项，这样你换域名的时候就不用担心评论找不到了
+2. `url` 全链接URL路径的方式。
+3. `title` 按页面title标题的方式。
+
+其他还有几个不常用，这里就不再赘述了。
 
 #### 不蒜子页面计数器支持
 
@@ -182,8 +190,6 @@ disablePathToLower = true
 
 #### 自定义CSS&JS
 
-详见：http://www.xianmin.org/post/hugo-shortcode-douban-item/
-
 ```
 [params]
   # 这里我存放在了主题的static文件夹里，根目录的似乎也可以
@@ -194,8 +200,6 @@ disablePathToLower = true
 ```
 
 #### 添加了部分自定义的shortcode
-
-https://github.com/parsiya/Hugo-Shortcodes
 
 * Octopress blockquote (blockquote.html)
 * Wikipedia Link Generator (wp.html)
