@@ -1,0 +1,8 @@
+<h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    {{ range first 10 (where (where .Site.Pages "Type" "in" (slice "post" "posts")) "Kind" "page") }}
+    <li>
+        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>

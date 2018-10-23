@@ -1,0 +1,8 @@
+<h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+    <li>
+        <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}({{len $taxonomy}})</a>
+    </li>
+    {{ end }}
+</ul>

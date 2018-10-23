@@ -1,0 +1,18 @@
+{{ with .Site.Params.ads }}
+<section class="widget">
+    <h3 class="widget-title" style="color:red">福利派送</h3>
+    <ul class="widget-list">
+        {{ range . }}
+        <li>
+            <a href="{{ .url }}" title="{{ .title }}" target="_blank" style="color:red">
+                {{ if .img }}
+                    <img src="{{ .img }}">
+                {{ else }}
+                    {{ .title }}
+                {{ end }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
