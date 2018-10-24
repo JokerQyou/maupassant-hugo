@@ -36,7 +36,7 @@
 
     <link rel="stylesheet" href="{{ "css/normalize.css" | relURL}}">
     {{ if .IsPage }}
-    <link rel="stylesheet" href="{{ "css/prism.css" | relURL }}">
+        <link rel="stylesheet" href="{{ "css/prism.css" | relURL }}">
     {{ end }}
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
     {{ range .AlternativeOutputFormats -}}
@@ -46,6 +46,6 @@
 
     <!-- custom css -->
     {{ range .Site.Params.customCSS }}
-    <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
+        <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
     {{ end }}
 </head>

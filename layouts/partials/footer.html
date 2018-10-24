@@ -1,25 +1,25 @@
 <footer id="footer">
     <div class="container">
         &copy; 2018 <a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }} By {{ .Site.Author.name }}</a>.
-        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io">Hugo</a>.
-        <a href="http://www.flysnow.org/">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo">maupassant</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="http://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank">maupassant</a>.
         {{ if .Site.Params.showHostPage }}
-        Hosted by <a rel="nofollow noreferer noopener" href="https://pages.coding.me">Coding Pages</a>.
+        Hosted by <a rel="nofollow noreferer noopener" href="https://pages.coding.me" target="_blank">Coding Pages</a>.
         {{ end }}
     </div>
 </footer>
 
 {{ if .IsPage }}
-<script type="text/javascript" src="{{ "js/prism.js" | relURL}}" async="true"></script>
-<script type="text/javascript">
-window.MathJax = {
-    tex2jax: {
-        inlineMath: [ ['$','$'] ],
-        processEscapes: true
-    }
-};
-</script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script type="text/javascript" src="{{ "js/prism.js" | relURL}}" async="true"></script>
+    <script type="text/javascript">
+    window.MathJax = {
+        tex2jax: {
+            inlineMath: [ ['$','$'] ],
+            processEscapes: true
+        }
+    };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 {{ end }}
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src="{{ "js/totop.js?v=0.0.0" | relURL }}" async=""></script>
