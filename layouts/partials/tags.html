@@ -1,6 +1,6 @@
 <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
     {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-    <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
+    <a href="{{ "/tags/" | absLangURL }}{{ $name | urlize }}/">{{ $name }}</a>
     {{ end }}
 </div>
