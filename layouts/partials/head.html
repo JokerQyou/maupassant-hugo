@@ -44,6 +44,17 @@
     {{ end -}}
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
+    {{ if .Site.Params.googleAd }}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "{{ .Site.Params.googleAd }}",
+        enable_page_level_ads: true
+    });
+    </script>
+    {{ end }}
+
+
     <!-- custom css -->
     {{ range .Site.Params.customCSS }}
         <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">

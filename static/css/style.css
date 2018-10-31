@@ -150,6 +150,7 @@ textarea {
     clear:both;
 }
 .post-content a, .comment-content a {
+    color: #0789e0;
     border-bottom:1px solid #ddd;
 }
 .post-meta a:hover, .post-content a:hover, .widget a:hover, .comment-content a {
