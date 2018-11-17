@@ -94,6 +94,8 @@ The sample config contains three additional tabs: one points to `/gpg-public-key
 - The only constraint is that each menu's `identifier` field must be unique.
 - `weight` field is used to sort menu entries, it must be an integer. Menu entries are sorted in ascending order.
 
+There are two internal taxonomy page you can use: `/tags/` and `/categories/`, each will list all terms and all posts containing each term.
+
 ## Archive list
 
 To enable the archive list page (located at `/archives/`), you need to create `archives.md` file inside your site's `content` folder. Fill this file with following content:
