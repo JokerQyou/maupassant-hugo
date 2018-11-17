@@ -28,7 +28,7 @@ PaginatePath = "page"
 
 [params]
     subtitle = "What else did you expect me to say?"
-    description = "A nook preserved in Cyperspace where I can be myself."
+    description = "A nook preserved in Cyberspace where I can be myself."
     keywords = "MyNook,博客,Web,软件,Python"
 
     [author]
