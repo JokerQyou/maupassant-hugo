@@ -121,6 +121,10 @@ slug: "test"
 
 And your archive list page will be available at `/test/`. Don't forget to edit URL of corresponding menu item.
 
+## Site search
+
+By default DuckDuckGo is used when searching from sidebar. You can switch to Google by setting `search_provider = "google"` in `[params]` in your site config.
+
 # Analytics
 
 As a reader / user of the Internet I hate tracking, because we deserve privacy. But as a blogger I was always trying out for new and more accurate tracking / analytics product.
