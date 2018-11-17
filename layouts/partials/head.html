@@ -9,9 +9,12 @@
 
     {{ if .IsHome -}}
     <title>{{ .Site.Title }}</title>
-    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:title" content="{{ .Site.Title }} - {{ .Site.Params.subtitle }}">
     <meta property="og:type" content="website">
     <meta name="description" content="{{ .Site.Params.description }}">
+    {{ with .Site.Params.keywords }}
+    <meta name="keywords" content="{{ . }}">
+    {{ end }}
     {{- else -}}
     <title>{{ .Title }} - {{ .Site.Title }}</title>
     <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">

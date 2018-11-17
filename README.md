@@ -27,16 +27,18 @@ enableRobotsTXT = true
 PaginatePath = "page"
 
 [params]
-    description = "What else did you expect me to say?"
+    subtitle = "What else did you expect me to say?"
+    description = "A nook preserved in Cyperspace where I can be myself."
+    keywords = "MyNook,博客,Web,软件,Python"
+
+    [author]
+        name = "Joker Qyou"
+        homepage = "https://mynook.info"
 
 [[params.links]]
     name = "比尔盖子 博客"
     url = "https://tomli.blog/"
     title = "代码如诗，人生无限。"
-
-[author]
-    name = "Joker Qyou"
-    homepage = "https://mynook.info"
 
 [[menu.main]]
     identifier = "gpg"
@@ -64,7 +66,11 @@ The above configuration was excerpted from my blog.
 - `baseURL` sets the base URL for your whole block, every permanent link is based on it.
 - `theme = "maupassant-hugo"` is required to enable this theme.
 - `title` sets the title of your blog.
-- The `description` parameter in `[params]` block specifies a short message to be displayed under your blog name. In some other themes it is referenced as `subtitle`.
+- `subtitle` in `[params]` block specifies a short message to be displayed under
+  your blog name.
+- `description` in `[params]` block is used purely for SEO purpose.
+- `keywords` in `[params]`: this is where you could set SEO keywords for your
+  website. Separate them with a comma.
 - `[[menu.main]]` blocks are used to add tab entries to blog navigation area. See detailed usage below.
 
 ## Links

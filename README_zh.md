@@ -27,16 +27,18 @@ enableRobotsTXT = true
 PaginatePath = "page"
 
 [params]
-    description = "What else did you expect me to say?"
+    subtitle = "What else did you expect me to say?"
+    description = "A nook preserved in Cyperspace where I can be myself."
+    keywords = "MyNook,博客,Web,软件,Python"
+
+    [author]
+        name = "Joker Qyou"
+        homepage = "https://mynook.info"
 
 [[params.links]]
     name = "比尔盖子 博客"
     url = "https://tomli.blog/"
     title = "代码如诗，人生无限。"
-
-[author]
-    name = "Joker Qyou"
-    homepage = "https://mynook.info"
 
 [[menu.main]]
     identifier = "gpg"
@@ -64,7 +66,9 @@ PaginatePath = "page"
 - `baseURL` 用于设置博客的基准地址，所有其他永久地址都基于这个设置进行计算。
 - 使用 `theme = "maupassant-hugo"` 来启用这个主题。
 - `title` 用于设置博客的标题。
-- `[params]` 中的 `description` 参数，用于设置显示在博客标题下方的一句描述语。在某些主题中，这个描述语被称为 `subtitle`。
+- `[params]` 中的 `subtitle` 参数，用于设置显示在博客标题下方的一句描述语。
+- `[params]` 中的 `description` 参数，仅用于设置 SEO 的描述语。
+- `[params]` 中的 `keywords` 参数，用于设置 SEO 的关键词列表。关键词以英文逗号分隔。
 - 设置中的 `[[menu.main]]` 区块用于设置顶部导航菜单。见下文中的详细说明。
 
 ## 友情链接
