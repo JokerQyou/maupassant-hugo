@@ -1,0 +1,54 @@
+{{/** A search form using DuckDuckGo, docs: https://duckduckgo.com/params **/}}
+<form id="search" method="POST" action="https://duckduckgo.com/">
+    {{/** the keywords **/}}
+    <input type="text" name="q" maxlength="255" placeholder="搜索...">
+    {{/** site search **/}}
+    <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
+    {{/** turn off SafaSearch **/}}
+    <input type="hidden" name="kp" value="-2">
+    {{/** turn on HTTPS **/}}
+    <input type="hidden" name="kh" value="1">
+    {{/** no region, worldwide **/}}
+    <input type="hidden" name="kl" value="wt-wt">
+    {{/** request method, g / p for GET / POST **/}}
+    <input type="hidden" name="kg" value="p">
+    {{/** full URLs **/}}
+    <input type="hidden" name="kaf" value="1">
+    {{/** turn off advertisements **/}}
+    {{/** Please double check ToS of DuckDuckGo to see if you can do this **/}}
+    <input type="hidden" name="k1" value="-1">
+
+    {{/** theme of search result page **/}}
+
+    {{/** Colors **/}}
+    {{/** background color **/}}
+    <input type="hidden" name="k7" value="#ffffff">
+    {{/** header color **/}}
+    <input type="hidden" name="kj" value="#ffffff">
+    {{/** highlight color, this is the background when you hover a result block **/}}
+    <input type="hidden" name="ky" value="#eaeaea">
+    {{/** URLs color **/}}
+    <input type="hidden" name="kx" value="#6E7173">
+    {{/** text color **/}}
+    <input type="hidden" name="k8" value="#444">
+    {{/** links color **/}}
+    <input type="hidden" name="k9" value="#6E7173">
+    {{/** visited links color **/}}
+    <input type="hidden" name="kaa" value="#6E7173">
+    {{/** theme **/}}
+    <input type="hidden" name="kae" value="#6E7173">
+
+    {{/** Interface settings **/}}
+    {{/** turn on DuckDuckGo interface, mainly their icon **/}}
+    <input type="hidden" name="ko" value="1">
+    {{/** text font **/}}
+    <input type="hidden" name="kt" value="n">
+    {{/** link font **/}}
+    <input type="hidden" name="ka" value="g">
+    {{/** size **/}}
+    <input type="hidden" name="ks" value="l">
+    {{/** turn on pagination **/}}
+    <input type="hidden" name="kv" value="1">
+
+    <button type="submit" class="submit icon-search"></button>
+</form>

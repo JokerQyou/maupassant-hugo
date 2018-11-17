@@ -1,0 +1,6 @@
+{{/** A search form using Google **/}}
+<form id="search" action="https://www.google.com/search" method="get" accept-charset="utf-8" target="_blank">
+    <input type="text" name="q" maxlength="255" placeholder="搜索...">
+    <input type="hidden" name="sitesearch" value="{{ .Site.BaseURL }}">
+    <button type="submit" class="submit icon-search"></button>
+</form>
