@@ -94,7 +94,7 @@ PaginatePath = "page"
 
 ## 存档列表页面
 
-在你博客的 `content/archives` 目录下建立一个 `index.md`，填充如下内容，即可激活存档列表页面（位于 `/archives/`）。
+在你博客的 `content` 目录下建立一个 `archives.md`，填充如下内容，即可激活存档列表页面（位于 `/archives/`）。
 
 ```markdown
 ---
@@ -103,7 +103,19 @@ type: "archives"
 ---
 ```
 
-注意 `type: "archives"` 是必须的。这个页面的 `type` 必须是 `archives`。
+放在 `content/archives.md` 或 `content/archives/index.md` 都是有效的。
+但是注意 `type: "archives"` 是必须的。这个页面的 `type` 必须是 `archives`。
+
+当然，如果你想自定义存档页面的地址的话，也可以与普通文章一样，通过 `slug` 来指定：
+
+```markdown
+---
+title: "Archives"
+type: "archives"
+slug: "test"
+```
+
+这样指定之后存档页面的访问地址就是 `/test/`。注意修改对应的顶部菜单 URL。
 
 # 统计分析
 

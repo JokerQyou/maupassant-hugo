@@ -96,7 +96,7 @@ The sample config contains three additional tabs: one points to `/gpg-public-key
 
 ## Archive list
 
-To enable the archive list page (located at `/archives/`), you need to create `index.md` file inside your site's `content/archives` folder. Fill this file with following content:
+To enable the archive list page (located at `/archives/`), you need to create `archives.md` file inside your site's `content` folder. Fill this file with following content:
 
 ```markdown
 ---
@@ -105,7 +105,19 @@ type: "archives"
 ---
 ```
 
-Please note that `type: "archives"` is mandatory, the `type` must be `archives`.
+Either `content/archives.md` or `content/archives/index.md` will do.
+However, do notice that `type: "archives"` is mandatory, the `type` must be `archives`.
+
+You can also customize URL of your archive list page via `slug`:
+
+```markdown
+---
+title: "Archives"
+type: "archives"
+slug: "test"
+```
+
+And your archive list page will be available at `/test/`. Don't forget to edit URL of corresponding menu item.
 
 # Analytics
 
