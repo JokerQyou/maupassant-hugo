@@ -10,3 +10,17 @@
 <script type="text/javascript" src="{{ "js/prism.js" | relURL}}" async="true"></script>
 {{ end }}
 <script type="text/javascript" src="{{ "js/app.js" | relURL}}" defer></script>
+
+{{/** MathJax library, for rendering mathematical expressions **/}}
+<script type="text/javascript">
+  window.MathJax = {
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscape: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
