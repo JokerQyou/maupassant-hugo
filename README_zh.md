@@ -31,6 +31,9 @@ PaginatePath = "page"
     description = "A nook preserved in Cyberspace where I can be myself."
     keywords = "MyNook,博客,Web,软件,Python"
 
+    customCSS = ["style.extra.css"]
+    customJS = ["app.extra.js"]
+
     [author]
         name = "Joker Qyou"
         homepage = "https://mynook.info"
@@ -69,6 +72,8 @@ PaginatePath = "page"
 - `[params]` 中的 `subtitle` 参数，用于设置显示在博客标题下方的一句描述语。
 - `[params]` 中的 `description` 参数，仅用于设置 SEO 的描述语。
 - `[params]` 中的 `keywords` 参数，用于设置 SEO 的关键词列表。关键词以英文逗号分隔。
+- `[params]` 中的 `customCSS` 和 `customJS` 用于加载自定义的 CSS 和 JS
+  文件。只需要指定文件名。CSS 从 `static/css` 目录加载，相应地，JS 从 `static/js` 目录加载。
 - 设置中的 `[[menu.main]]` 区块用于设置顶部导航菜单。见下文中的详细说明。
 
 ## 友情链接

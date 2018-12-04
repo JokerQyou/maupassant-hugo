@@ -11,6 +11,11 @@
 {{ end }}
 <script type="text/javascript" src="{{ "js/app.js" | relURL}}" defer></script>
 
+{{/** Extra custom Javascript files **/}}
+{{- range .Site.Params.customJS }}
+<script type="text/javascript" src="{{ "js/" | relURL}}{{ . }}" defer></script>
+{{ end -}}
+
 {{/** MathJax library, for rendering mathematical expressions **/}}
 <script type="text/javascript">
   window.MathJax = {

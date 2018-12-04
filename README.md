@@ -31,6 +31,9 @@ PaginatePath = "page"
     description = "A nook preserved in Cyberspace where I can be myself."
     keywords = "MyNook,博客,Web,软件,Python"
 
+    customCSS = ["style.extra.css"]
+    customJS = ["app.extra.js"]
+
     [author]
         name = "Joker Qyou"
         homepage = "https://mynook.info"
@@ -71,6 +74,8 @@ The above configuration was excerpted from my blog.
 - `description` in `[params]` block is used purely for SEO purpose.
 - `keywords` in `[params]`: this is where you could set SEO keywords for your
   website. Separate them with a comma.
+- `customCSS` and `customJS` in `[params]` are used to load custom CSS and JS
+  file. Please use bare filenames. Files will be loaded respectively from `static/js` and `static/css`.
 - `[[menu.main]]` blocks are used to add tab entries to blog navigation area. See detailed usage below.
 
 ## Links
