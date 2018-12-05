@@ -1,3 +1,12 @@
+window.MathJax = {
+  messageStyle: 'none',
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscape: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+};
 (function(){
   var main = function(){
     var toc = document.getElementById('toc');
