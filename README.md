@@ -130,6 +130,15 @@ And your archive list page will be available at `/test/`. Don't forget to edit U
 
 By default DuckDuckGo is used when searching from sidebar. You can switch to Google by setting `search_provider = "google"` in `[params]` in your site config.
 
+## MathJax and strict Content Security Policy
+
+This theme uses MathJax to render mathematical expressions. Since the rendering happens in the browser, an external Javascript file has to be loaded.
+We're currently using the official MathJax CDN provided by Cloudflare. The domain is `cdnjs.cloudflare.com`. If a strict CSP was configured on your server, consider adding this domain to `script-src` so MathJax can run without issue.
+
+`unsafe-inline` should also be included in the `style-src` CSP so that MathJax could apply CSS styles correctly.
+
+If you don't know what CSP is, or have never configured one, it's most likely these extra configurations are unnecessary.
+
 # Analytics
 
 As a reader / user of the Internet I hate tracking, because we deserve privacy. But as a blogger I was always trying out for new and more accurate tracking / analytics product.
