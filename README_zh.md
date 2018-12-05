@@ -128,7 +128,7 @@ slug: "test"
 
 搜索框默认使用 DuckDuckGo。你可以切换为 Google 搜索，只需在配置文件的 `[params]` 块中，指定 `search_provider = "google"`。
 
-## MathJax 与 strict Content Security Policy
+## MathJax 与严格 Content Security Policy
 
 这个主题使用 MathJax 来渲染数学公式。MathJax 是在浏览器中渲染数学公式的 Javascript 库，因此我们需要从第三方加载一个 JS 文件。当前使用的是由 Cloudflare 提供的官方 CDN 链接，域名是 `cdnjs.cloudflare.com`。如果你的服务器上部署了较为严格的 CSP，需要将此域名加入 `script-src` 列表中。
 
