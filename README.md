@@ -26,6 +26,10 @@ theme = "maupassant-hugo"
 enableRobotsTXT = true
 PaginatePath = "page"
 
+[author]
+    name = "Joker Qyou"
+    homepage = "https://mynook.info"
+
 [params]
     subtitle = "What else did you expect me to say?"
     description = "A nook preserved in Cyberspace where I can be myself."
@@ -34,9 +38,10 @@ PaginatePath = "page"
     customCSS = ["style.extra.css"]
     customJS = ["app.extra.js"]
 
-    [author]
-        name = "Joker Qyou"
-        homepage = "https://mynook.info"
+[params.utteranc]
+    repo = "JokerQyou/comments"
+    issueTerm = "url"
+    theme = "github-light"
 
 [[params.links]]
     name = "比尔盖子 博客"
@@ -125,6 +130,26 @@ slug: "test"
 ```
 
 And your archive list page will be available at `/test/`. Don't forget to edit URL of corresponding menu item.
+
+## Comments
+
+[utteranc.es](https://utteranc.es) comment service is supported, configure it via `[params.utteranc]` block.
+
+- `repo` the **public** GitHub repository to use, in the format of `username/repo_name`
+- `issueTerm` in which way the blog posts and GitHub issues are associated.
+  Possible values are:
+  - `url` the title of GitHub issue would contain the full URL of corresponding
+    blog post
+  - `pathname` the title of GitHub issue would contain the pathname of
+    corresponding blog post
+  - `title` and `og:title` use the title or `og:title` meta value of the blog post as title of corresponding issue
+  - Notice: utteranc.es support custom issue term and user-specified issue
+    number, but these are not supported by this theme
+- `theme` name of the theme to be used by utteranc.es. Currently there are
+  `github-light` and `github-dark`
+
+If `[parmas.utteranc]` is not defined in `config.toml`, comments will be disabled.
+You can also disable comment specific post or page, by setting `commentDisabled` to `true` in the front matter.
 
 ## Site search
 

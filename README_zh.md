@@ -26,6 +26,10 @@ theme = "maupassant-hugo"
 enableRobotsTXT = true
 PaginatePath = "page"
 
+[author]
+    name = "Joker Qyou"
+    homepage = "https://mynook.info"
+
 [params]
     subtitle = "What else did you expect me to say?"
     description = "A nook preserved in Cyberspace where I can be myself."
@@ -34,9 +38,10 @@ PaginatePath = "page"
     customCSS = ["style.extra.css"]
     customJS = ["app.extra.js"]
 
-    [author]
-        name = "Joker Qyou"
-        homepage = "https://mynook.info"
+[params.utteranc]
+    repo = "JokerQyou/comments"
+    issueTerm = "url"
+    theme = "github-light"
 
 [[params.links]]
     name = "比尔盖子 博客"
@@ -123,6 +128,23 @@ slug: "test"
 ```
 
 这样指定之后存档页面的访问地址就是 `/test/`。注意修改对应的顶部菜单 URL。
+
+## 评论
+
+主题支持 [utteranc.es](https://utteranc.es) 评论。使用 `[params.utteranc]` 块来配置。
+
+- `repo` 评论数据存储在 GitHub issue 中，这里指定要使用的**公开** GitHub 仓库的简称，格式是 `用户名/仓库名`
+- `issueTerm` 指定 GitHub issue 与文章的关联方式
+  可用的值为：
+  - `url` GitHub issue 的标题包含对应文章的完整 URL
+  - `pathname` GitHub issue 标题包含对应文章完整 URL 的 pathname 部分
+  - `title` 和 `og:title` GitHub issue 的标题包含文章的标题或文章元数据的 `og:title` 值
+  - 注意：utteranc.es 还支持自定义的关联词，以及由用户手动指定文章对应的 issue
+    编号。但本主题不支持这两种方式。
+- `theme` 评论显示的主题风格。现在有 `github-light` 和 `github-dark` 两种。
+
+如果在 `config.toml` 中不添加 `[params.utteranc]` 块，则全站评论都显示被禁用。
+要在开启评论的情况下，单独禁用某篇文章或某个页面的评论，在其 front matter 中设置 `commentDisabled` 为 `true` 即可。
 
 ## 站内搜索
 
