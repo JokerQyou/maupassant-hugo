@@ -22,7 +22,11 @@ Maupassant theme, ported to Hugo.
 8. 支持文章按年份日期进行归档
 9. 支持GA分析统计
 10. sitemap站点地图
-11. 代码高亮
+11. 代码高亮、代码行号
+    * markup、css、clike、javascript、c、csharp、bash、cpp
+    * aspnet、dart、docker、markup-templating、erlang
+    * go、groovy、java、json、kotlin、markdown、lua、objectivec
+    * php、python、r、yaml、toml
 12. 404错误页
 13. 支持关键字SEO优化
 14. Google站内搜索

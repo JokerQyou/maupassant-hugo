@@ -10,8 +10,12 @@
 </footer>
 
 {{ if .IsPage }}
-    <script type="text/javascript" src="{{ "js/prism.js" | relURL}}" async="true"></script>
     <script type="text/javascript">
+    //添加行号
+    (function(){
+        $("pre code").parent().addClass("line-numbers")
+    }())
+
     window.MathJax = {
         tex2jax: {
             inlineMath: [ ['$','$'] ],
@@ -19,6 +23,7 @@
         }
     };
     </script>
+    <script type="text/javascript" src="{{ "js/prism.js" | relURL}}" async="true"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 {{ end }}
 <a id="rocket" href="#top"></a>
