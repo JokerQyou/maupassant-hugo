@@ -1,0 +1,14 @@
+<div id="comments">
+{{- if and (isset .Site.Params "utteranc") (not $.Params.commentDisabled) -}}
+  <span class="widget-title">评论</span>
+  <script src="https://utteranc.es/client.js"
+          repo="{{ .Site.Params.utteranc.repo }}"
+          issue-term="{{ .Site.Params.utteranc.issueTerm }}"
+          theme="{{ .Site.Params.utteranc.theme }}"
+          crossorigin="anonymous"
+          async>
+  </script>
+{{- else -}}
+  <span class="widget-title">评论已关闭</span>
+{{- end -}}
+</div>
