@@ -81,6 +81,37 @@ PaginatePath = "page"
   文件。只需要指定文件名。CSS 从 `static/css` 目录加载，相应地，JS 从 `static/js` 目录加载。
 - 设置中的 `[[menu.main]]` 区块用于设置顶部导航菜单。见下文中的详细说明。
 
+## 文章概要
+
+当在首页和各个列表页面中显示文章概要时，主题使用 [Hugo 内置的 `.Summary` 机制](https://gohugo.io/content-management/summaries/#automatic-summary-splitting)。默认情况下每篇文章的前 70 个词被摘录作为概要内容。可以在站点配置文件中使用 `summaryLength` 来修改这个长度。
+
+也可以在文章的 front matter 中使用 `description` 来手动指定需要显示的概要内容。
+但在使用多行文本时请注意格式，以免造成 front matter 语法错误。参考以下例子。
+
+如果使用 YAML 格式的 front matter（由 `---` 包围）：
+
+```yaml
+description: |
+    这是手动指定的概要内容。
+    这是个多行文本
+
+    所以首先使用 `|` 开启了多行，并且所有行都向内缩进了一层。
+author: "我的名字"
+```
+
+如果使用 TOML 格式的 front matter（由 `+++` 包围）：
+
+```toml
+description = '''
+这也是手动指定的概要内容。
+这也是个多行文本
+
+但这个 front matter 是 TOML 格式，所以只需要使用三个引号包裹多行内容即可。
+无需额外缩进。
+'''
+author = "我的名字"
+```
+
 ## 友情链接
 
 可以添加不限数量的友情链接，只需如示例一样格式，添加多个 `[[params.links]]` 设置块即可。其中每个块可以有这些设置：
@@ -150,11 +181,12 @@ slug: "test"
 
 搜索框默认使用 DuckDuckGo。你可以切换为 Google 搜索，只需在配置文件的 `[params]` 块中，指定 `search_provider = "google"`。
 
-## MathJax 与严格 Content Security Policy
+## Content Security Policy
 
-这个主题使用 MathJax 来渲染数学公式。MathJax 是在浏览器中渲染数学公式的 Javascript 库，因此我们需要从第三方加载一个 JS 文件。当前使用的是由 Cloudflare 提供的官方 CDN 链接，域名是 `cdnjs.cloudflare.com`。如果你的服务器上部署了较为严格的 CSP，需要将此域名加入 `script-src` 列表中。
+如果你为页面配置了较为严格的 CSP，请注意以下内容：
 
-此外，为了让 MathJax 可以正确地应用 CSS 样式，需要将 `unsafe-inline` 加入 `style-src` 列表中。
+- 这个主题使用 MathJax 来渲染数学公式，当前使用的是由 Cloudflare 提供的官方 CDN 链接。您需要将 `cdnjs.cloudflare.com` 加入 `script-src`。此外，为了让 MathJax 可以正确地应用 CSS 样式，需要将 `unsafe-inline` 加入 `style-src`。
+- 如果你开启了 utteranc.es 的评论服务，需要将 `utteranc.es` 加入 `default-src`。
 
 如果你没有配置过 CSP，那么通常情况下无需进行任何操作。
 

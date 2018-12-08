@@ -83,6 +83,36 @@ The above configuration was excerpted from my blog.
   file. Please use bare filenames. Files will be loaded respectively from `static/js` and `static/css`.
 - `[[menu.main]]` blocks are used to add tab entries to blog navigation area. See detailed usage below.
 
+## Post summary
+
+This theme uses [Hugo's built-in `.Summary` mechanism][hugo-content-summary] when rendering index and taxonomy page. By default the first 70 words of a post are taken as summary.
+You can change this number by using `summaryLength` in your site config.
+
+You can also override the summary content of a specific post by providing `description` value in its front matter.
+Please be caution, however, to properly encode your `description` value if there's multiple line. Take a look.
+
+If you use YAML front matter (in which case it's surrounded by `---`):
+
+```yaml
+description: |
+    This is a description.
+    But there is multiline of texts.
+    So there is a `|` at the first line, and all other lines are indented.
+author: "My Name"
+```
+
+If you use TOML front matter (surrounded by `+++`):
+
+```toml
+description = '''
+This is a description.
+There are multiple lines.
+But the front matter is in TOML format, so a triple quote would do the trick.
+And no need to indent the lines.
+'''
+author = "My Name"
+```
+
 ## Links
 
 You can add as many links as you like by adding `[[params.links]]` blocks. In which:
@@ -133,7 +163,7 @@ And your archive list page will be available at `/test/`. Don't forget to edit U
 
 ## Comments
 
-[utteranc.es](https://utteranc.es) comment service is supported, configure it via `[params.utteranc]` block.
+[utteranc.es][utteranc.es] comment service is supported, configure it via `[params.utteranc]` block.
 
 - `repo` the **public** GitHub repository to use, in the format of `username/repo_name`
 - `issueTerm` in which way the blog posts and GitHub issues are associated.
@@ -155,12 +185,12 @@ You can also disable comment specific post or page, by setting `commentDisabled`
 
 By default DuckDuckGo is used when searching from sidebar. You can switch to Google by setting `search_provider = "google"` in `[params]` in your site config.
 
-## MathJax and strict Content Security Policy
+## Content Security Policy
 
-This theme uses MathJax to render mathematical expressions. Since the rendering happens in the browser, an external Javascript file has to be loaded.
-We're currently using the official MathJax CDN provided by Cloudflare. The domain is `cdnjs.cloudflare.com`. If a strict CSP was configured on your server, consider adding this domain to `script-src` so MathJax can run without issue.
+If strict content security policy was configured on your server, please mind that:
 
-`unsafe-inline` should also be included in the `style-src` CSP so that MathJax could apply CSS styles correctly.
+- This theme uses MathJax to render mathematical expressions. We’re currently using the official MathJax CDN provided by CLoudflare. You should add `cdnjs.cloudflare.com` to `script-src`. Also to allow MathJax to apply inline styles, `unsafe-inline` should be added to `style-src`.
+- If you’ve enabled utteranc.es comment service, please add `utteranc.es` to `default-src`.
 
 If you don't know what CSP is, or have never configured one, it's most likely these extra configurations are unnecessary.
 
@@ -181,5 +211,7 @@ Special thanks to [飞雪无情][rujews_github] for the following features:
 
 He also maintains a fork of this theme with some other features [here][flysnow_maupassant_hugo_github].
 
+[hugo-content-summary]: https://gohugo.io/content-management/summaries/#automatic-summary-splitting
+[utteranc.es]: https://utteranc.es
 [rujews_github]: https://github.com/rujews
 [flysnow_maupassant_hugo_github]: https://github.com/rujews/maupassant-hugo
