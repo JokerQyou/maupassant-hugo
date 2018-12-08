@@ -29,7 +29,12 @@
                             </div>
                             {{ end }}
                             <div class="post-content">
-                                {{ .Content | safeHTML | truncate 200 }}
+                                {{/** Prefer user-defined .description content, fallback to built-in summary **/}}
+                                {{ with .Description }}
+                                    {{ markdownify . }}
+                                {{ else }}
+                                    {{ .Summary }}
+                                {{ end }}
                                 <a href="{{ .Permalink }}">阅读全文</a>
                             </div>
                         </article>
