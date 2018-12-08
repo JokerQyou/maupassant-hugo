@@ -1,8 +1,8 @@
 window.MathJax = {
   messageStyle: 'none',
   tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\[','\]']],
+    inlineMath: [['$','$']],
+    displayMath: [['$$','$$']],
     processEscape: true,
     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
   }
