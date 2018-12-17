@@ -36,6 +36,7 @@ Maupassant theme, ported to Hugo.
 18. 自定义css、js
 19. utteranc评论
 20. 部分自定义的shortcode
+21. 添加灯箱、图片懒加载效果
 
 ## 下载安装
 

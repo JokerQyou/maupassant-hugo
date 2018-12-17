@@ -54,6 +54,12 @@
     </script>
     {{ end }}
 
+    <!-- image lightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.11/dist/css/lightgallery.min.css">
+
+    <!-- lazysizes -->
+    <script src="{{ "/js/lazysizes.min.js" | relURL }}"></script>
+    <link rel="stylesheet" href="{{ "/css/figure.css" }}">
 
     <!-- custom css -->
     {{ range .Site.Params.customCSS }}

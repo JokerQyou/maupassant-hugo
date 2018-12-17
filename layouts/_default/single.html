@@ -29,7 +29,13 @@
                         </div>
                         {{ end }}
                         <div class="post-content">
-                            {{ .Content }}
+                            {{ $reAltIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)?\" />" }}
+                            {{ $reAltOut := "<figure><img src=\"/images/ring.svg\" data-sizes=\"auto\" data-src=\"$1\" alt=\"$2\" class=\"lazyload\"><figcaption class=\"image-caption\">$2</figcaption></figure>" }}
+                            {{ $altContent := .Content | replaceRE $reAltIn $reAltOut | safeHTML }}
+                            {{ $reAltTitleIn := "<img src=\"([^\"]+)\" alt=\"([^\"]+)?\" title=\"([^\"]+)?\" />" }}
+                            {{ $reAltTitleOut :=  "<figure><img src=\"/images/ring.svg\" data-src=\"$1\" data-sizes=\"auto\" alt=\"$2\" title=\"$3\" class=\"lazyload\"><figcaption class=\"image-caption\">$2</figcaption></figure>" }}
+                            {{ $finalContent := $altContent | replaceRE $reAltTitleIn $reAltTitleOut | safeHTML }}
+                            {{ $finalContent }}
                         </div>
 
                         {{ partial "related" . }}

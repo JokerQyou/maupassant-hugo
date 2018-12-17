@@ -42,7 +42,7 @@
                             </div>
                             {{ end }}
                             <div class="post-content">
-                                {{ .Content | markdownify | truncate 180 }}
+                                {{ .Content | markdownify | truncate 100 }}
                                 <p class="readmore"><a href="{{ .Permalink }}">阅读全文</a></p>
                             </div>
                         </article>

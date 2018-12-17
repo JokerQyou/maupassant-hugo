@@ -1,7 +1,33 @@
+<blockquote>
+<div class="post-copyright">
+    {{ with .Site.Params.author }} 
+    <p class="copyright-item">
+        <span>本文作者:</span>
+        <span>{{ . }} </span>
+        </p>
+    {{ end }}
+   
+    {{ with .Permalink }} 
+    <p class="copyright-item">
+            <span>本文链接:</span>
+            <a href={{ . }}>{{ . }}</a>
+    </p>
+    {{ end }}
+
+    <p class="copyright-item lincese">
+    	<span>许可协议:</span>
+    	<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a>
+    </p>
+
+    <p>
+    	<b>转载请保留原文链接及作者。</b>
+    </p>
+</div>
+</blockquote>
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
 <div class="post-archive">
-    <h2>See Also</h2>
+    <h3>你可能对这些也感兴趣</h3>
     <ul class="listing">
         {{ range . }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
