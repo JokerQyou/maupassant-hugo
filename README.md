@@ -1,15 +1,11 @@
 # Maupassant
 Maupassant theme, ported to Hugo.
 
-1. 预览效果:[飞雪无情的博客](http://www.flysnow.org)
-2. [English Docs](README_EN.md)
+预览效果:[我的博客](https://y4er.github.io)
+在原仓库基础上 添加灯箱、图片懒加载效果，添加作者版权信息。
 
-一款非常简洁、性能高的Hugo主题，适配不同的设备（PC，Mobile等）。 主要是基于 Typecho [Cho](https://github.com/pagecho/maupassant/), 从 [JokerQyou](https://github.com/JokerQyou/maupassant-hugo) forked，修改和添加了很多功能而成，如GA统计、最近的文章、标签云、自定义菜单、按日期归档等 .
-
-## Preview
-
-![Maupassant 主题预览](./preview.png "Maupassant 主题预览")
-
+以下均为原仓库readme
+[English Docs](README_EN.md)
 ## 功能特性
 
 1. 最近发表的文章支持，显示最近的10篇 
@@ -36,7 +32,6 @@ Maupassant theme, ported to Hugo.
 18. 自定义css、js
 19. utteranc评论
 20. 部分自定义的shortcode
-21. 添加灯箱、图片懒加载效果
 
 ## 下载安装
 
