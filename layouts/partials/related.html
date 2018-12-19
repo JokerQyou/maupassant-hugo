@@ -1,3 +1,15 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<div class="post-archive">
+    <h3>你可能对这些也感兴趣</h3>
+    <ul class="listing">
+        {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}
+
 <blockquote>
 <div class="post-copyright">
     {{ with .Site.Params.author }} 
@@ -24,14 +36,3 @@
     </p>
 </div>
 </blockquote>
-{{ $related := .Site.RegularPages.Related . | first 5 }}
-{{ with $related }}
-<div class="post-archive">
-    <h3>你可能对这些也感兴趣</h3>
-    <ul class="listing">
-        {{ range . }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
-    </ul>
-</div>
-{{ end }}

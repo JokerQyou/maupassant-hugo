@@ -1,11 +1,16 @@
 # Maupassant
 Maupassant theme, ported to Hugo.
 
-预览效果:[我的博客](https://y4er.github.io)
-在原仓库基础上 添加灯箱、图片懒加载效果，添加作者版权信息。
+1. 预览效果:[Y4er的博客](https://y4er.com/)
 
-以下均为原仓库readme
-[English Docs](README_EN.md)
+一款非常简洁、性能高的Hugo主题，适配不同的设备（PC，Mobile等）。 主要是基于 Typecho [Cho](https://github.com/pagecho/maupassant/), 从 [rujews](https://github.com/rujews/maupassant-hugo) forked，在原基础上增加了图片灯箱效果、图片懒加载、文章版权信息、修改个别bug。
+
+**本README.MD修改自原仓库**
+
+## Preview
+
+![Maupassant 主题预览](./preview.png "Maupassant 主题预览")
+
 ## 功能特性
 
 1. 最近发表的文章支持，显示最近的10篇 
@@ -26,18 +31,21 @@ Maupassant theme, ported to Hugo.
 12. 404错误页
 13. 支持关键字SEO优化
 14. Google站内搜索
-15. See Also 支持
+15. 推荐文章 支持
 16. Disqus评论支持
 17. 不蒜子页面计数器支持
 18. 自定义css、js
 19. utteranc评论
 20. 部分自定义的shortcode
+21. 图片灯箱效果
+22. 图片懒加载
+23. 文章版权提示
 
 ## 下载安装
 
 ```bash
 cd <YOUR Bolg Root Dir>
-git clone https://github.com/rujews/maupassant-hugo themes/maupassant
+git clone https://github.com/Y4er/maupassant-hugo themes/maupassant
 ```
 
 ## 配置
@@ -51,19 +59,24 @@ theme = "maupassant"
 #### 基本配置
 
 ```toml
-baseURL = "http://www.flysnow.org"
+baseURL = "https://y4er.com"
 languageCode = "zh-CN"
-title = "飞雪无情的博客"
+title = "Y4er的博客"
 theme = "maupassant"
+hasCJKLanguage = true
+
+# Google统计
+GoogleAnalytics = "UA-131456498-4"
 
 [author]
-  name = "飞雪无情"
+  name = "Y4er"
 
 [params]
-  author = "飞雪无情"
-  subtitle = "专注于Android、Java、Go语言(golang)、移动互联网、项目管理、软件架构"
-  keywords = "golang,go语言,go语言笔记,飞雪无情,java,android,博客,项目管理,python,软件架构,公众号,小程序"
-  description = "专注于IT互联网，包括但不限于Go语言(golang)、Java、Android、Python、项目管理、抖音分析、软件架构等"
+  author = "Y4er"
+  subtitle = "伪程序员,信安爱好者"
+  keywords = "Y4er,信息安全,网络安全,红蓝攻防,渗透测试,bypass,waf,注入,黑客,chabug"
+  description = "专注于网络攻防和信息安全"
+  busuanzi = true
 ```
 
 基本配置大家都比较熟悉，这是我的博客的配置，仅供参考。
@@ -74,22 +87,16 @@ theme = "maupassant"
 [menu]
 
   [[menu.main]]
-    identifier = "books"
-    name = "新书"
-    url = "/books/"
-    weight = 2
-
-  [[menu.main]]
     identifier = "archives"
     name = "归档"
     url = "/archives/"
-    weight = 3
+    weight = 2
 
-  [[menu.main]]
+[[menu.main]]
     identifier = "about"
     name = "关于"
     url = "/about/"
-    weight = 4
+    weight = 3
 ```
 
 `identifier`标志符必须是唯一的，不能重复；`weight`用于排序，值越小越靠前。
@@ -97,14 +104,15 @@ theme = "maupassant"
 #### 友情链接
 
 ```toml
+# 友情链接
 [[params.links]]
-  title = "Android Gradle权威指南"
-  name = "Android Gradle权威指南"
-  url = "http://yuedu.baidu.com/ebook/14a722970740be1e640e9a3e"
+  title = "ChaBug安全"
+  name = "ChaBug安全"
+  url = "http://www.chabug.org/"
 [[params.links]]
-  title = "常用开发工具CDN镜像"
-  name = "常用开发工具CDN镜像"
-  url = "http://mirrors.flysnow.org/"
+  title = "ChaBug安全"
+  name = "ChaBug安全"
+  url = "http://www.chabug.org/"
 ```
 
 `params.links`是一个数组，所以我们可以自定义很多友情链接。`name`表示显示的链接文本，`title`表示鼠标悬停在友情链接时，显示的文本。
@@ -115,37 +123,31 @@ theme = "maupassant"
 
 ```toml
 [[params.ads]]
-  title = "领取￥1888阿里云产品通用代金券"
-  url = "https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=jdg9oj97"
-
+  title = "广告标题"
+  url = ""
 [[params.ads]]
-  title = "领取￥1888阿里云产品通用代金券"
-  url = "https://promotion.aliyun.com/ntms/act/vmpt/aliyun-group/home.html?userCode=jdg9oj97"
-  img = "https://img.alicdn.com/tfs/TB17qJhXpzqK1RjSZFvXXcB7VXa-200-126.jpg"
-[[params.ads]]
-  title = "领取￥1888阿里云产品通用代金券"
-  url = "https://promotion.aliyun.com/ntms/act/enterprise-discount.html?userCode=jdg9oj97"
-  img = "https://img.alicdn.com/tfs/TB1aDXhXpzqK1RjSZFvXXcB7VXa-259-194.jpg"
+  title = "广告标题"
+  url = "https://y4er.com/"
+  img = "https://y4er.com/1.jpg"
 ```
 
 `params.ads`是一个数组，所以我们可以自定义很多广告。如果`img`存在，则优先使用图片广告,`title`表示鼠标悬停在广告链接时，显示的文本。
-
-具体效果参考 [http://www.flysnow.org/](http://www.flysnow.org/)
 
 #### 添加GA分析统计
 
 该主题已经支持了GA分析统计，只需要在`config.toml`配置里加入如下配置即可。
 ```toml
-googleAnalytics = "GA ID"
+# Google统计
+GoogleAnalytics = "UA-134548098-1"
 ```
-
+**注意 请加到尽可能靠上的位置**
 #### 文章归档支持
 
 Hugo默认是不支持生成归档文件的，需要自己实现。该主题已经实现了文章归档，只需要在新建`content/archives/index.md`文件，文件内容为：
 
 ```md
 title: "归档"
-description: Android资深工程师 ，Go和Java打杂师，《Android Gradle权威指南》作者，Android官方技术文档译者
+description: 我写过的文章都在这里了
 type: archives
 ```
 
@@ -160,6 +162,7 @@ type: archives
 ```toml
 disqusShortname = "yourdiscussshortname"
 ```
+替换成你自己的Disqus名字即可。
 
 #### utteranc
 
@@ -169,7 +172,7 @@ disqusShortname = "yourdiscussshortname"
 ```toml
 [params.utteranc]
     enable = true
-    repo = ""    # 存储评论的Repo，格式为 owner/repo
+    repo = ""    # 存储评论的Repo，格式为 owner/repo 例如我的 Y4er/Y4er.github.io
     issueTerm = "pathname"  #表示你选择以那种方式让github issue的评论和你的文章关联。
     theme = "github-light" # 样式主题，有github-light和github-dark两种
 ```
@@ -188,8 +191,6 @@ disqusShortname = "yourdiscussshortname"
 [params]
   busuanzi = true
 ```
-
-替换成你自己的Disqus名字即可。
 
 #### 禁止分类的名称转为小写
 
@@ -245,4 +246,4 @@ disablePathToLower = true
 + Wordpress：https://github.com/iMuFeng/maupassant/
 + Ghost: https://github.com/LjxPrime/maupassant/
 + Hexo: https://github.com/tufu9441/maupassant-hexo
-+ Hugo: https://github.com/rujews/maupassant-hugo
++ Hugo: https://github.com/Y4er/maupassant-hugo

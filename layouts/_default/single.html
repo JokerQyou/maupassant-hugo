@@ -38,8 +38,6 @@
                             {{ $finalContent }}
                         </div>
 
-                        {{ partial "related" . }}
-
                         <div class="post-meta meta-tags">
                             {{ if and (isset .Params "tags") .Params.tags }}
                             <ul class="clearfix">
@@ -51,6 +49,9 @@
                             没有标签
                             {{ end }}
                         </div>
+
+                        {{ partial "related" . }}
+
                     </article>
                     {{ partial "comments" . }}
                 </div>
