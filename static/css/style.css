@@ -403,6 +403,25 @@ textarea {
 .post-content ul li{
     text-indent: .5em;
 }
+.post-content table {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1.1em;
+}
+.post-content table tr {
+    border-top: 1px solid #ddd;
+}
+.post-content table td, .post-content table th {
+    border: 1px solid #ddd;
+    padding: .375em .8125em;
+    text-indent: initial;
+}
+.post-content table tr:nth-child(even) {
+    background-color: #eee;
+}
 .archive-title {
     margin-left: 1em;
     line-height: 1.5;
