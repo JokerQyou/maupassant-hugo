@@ -971,3 +971,38 @@ img.alignright {
         display: none;
     }
 }
+
+/** Readmore link **/
+p.readmore {
+    margin: 0;
+    padding: 25px 0;
+    line-height: 1.8em;
+}
+p.readmore a {
+    text-decoration: none;
+    padding: .2em 1em;
+    border: 1px solid #ccc;
+    user-select: none;
+}
+p.readmore a:hover {
+    text-decoration: none;
+    border-bottom-color: #ccc;
+    background-color: #ececec;
+}
+/** Article list separator **/
+article.post:after {
+    content: ' ';
+    display: block;
+    height: 1px;
+    width: 30%;
+    margin-top: 15px;
+    background: #e0e0e0;
+}
+#main article:last-of-type:after {
+    content: none;
+    display: none;
+}
+/** Post summary ellipsis **/
+.post-content.summary.auto:after {
+    content: '……';
+}

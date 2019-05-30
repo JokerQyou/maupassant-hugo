@@ -9,7 +9,7 @@
 
             <div class="col-8" id="main">
                 <div class="res-cons">
-                    {{ range $index,$data := (where .Paginator.Pages "Type" "post") }}
+                    {{ range $index, $data := (where .Paginator.Pages "Type" "post") }}
                         <article class="post">
                             <header>
                                 <h2 class="post-title">
@@ -35,8 +35,8 @@
                                 {{ else }}
                                     {{ .Summary }}
                                 {{ end }}
-                                <a href="{{ .Permalink }}">阅读全文</a>
                             </div>
+                            <p class="readmore"><a href="{{ .Permalink }}">阅读全文</a></p>
                         </article>
                     {{ end }}
 
