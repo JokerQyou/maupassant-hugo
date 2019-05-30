@@ -85,7 +85,7 @@ PaginatePath = "page"
 
 当在首页和各个列表页面中显示文章概要时，主题使用 [Hugo 内置的 `.Summary` 机制](https://gohugo.io/content-management/summaries/#automatic-summary-splitting)。默认情况下每篇文章的前 70 个词被摘录作为概要内容。可以在站点配置文件中使用 `summaryLength` 来修改这个长度。
 
-也可以在文章的 front matter 中使用 `description` 来手动指定需要显示的概要内容。
+也可以在文章的 front matter 中使用 `summary` 或 `description` 来手动指定需要显示的概要内容。
 但在使用多行文本时请注意格式，以免造成 front matter 语法错误。参考以下例子。
 
 如果使用 YAML 格式的 front matter（由 `---` 包围）：

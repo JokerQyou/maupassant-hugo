@@ -88,8 +88,8 @@ The above configuration was excerpted from my blog.
 This theme uses [Hugo's built-in `.Summary` mechanism][hugo-content-summary] when rendering index and taxonomy page. By default the first 70 words of a post are taken as summary.
 You can change this number by using `summaryLength` in your site config.
 
-You can also override the summary content of a specific post by providing `description` value in its front matter.
-Please be caution, however, to properly encode your `description` value if there's multiple line. Take a look.
+You can also override the summary content of a specific post by providing `summary` or `description` value in its front matter.
+Please be caution, however, to properly encode your `summary` or `description` value if there's multiple line. Take a look.
 
 If you use YAML front matter (in which case it's surrounded by `---`):
 
