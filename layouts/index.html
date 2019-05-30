@@ -28,7 +28,8 @@
                                 {{ end }}
                             </div>
                             {{ end }}
-                            <div class="post-content">
+                            {{ $customSummary := (or .Description .Params.Summary) }}
+                            <div class="post-content summary{{ if $customSummary }} manual{{ else }} auto{{end}}">
                                 {{/** Prefer user-defined .description content, fallback to built-in summary **/}}
                                 {{ with .Description }}
                                     {{ markdownify . }}
