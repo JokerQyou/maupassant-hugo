@@ -97,9 +97,7 @@ pre, code {
     font-size:.92857em;
 }
 pre {
-    margin: 2em 0;
     overflow:auto;
-    border: 1px solid #ddd;
     display: block;
 }
 code {
@@ -376,10 +374,6 @@ textarea {
 }
 .post-content h3 {
     font-size: 1.2em;
-}
-.post-content pre, .comment-content pre {
-    max-height: 460px;
-    padding: 1.5em 2em;
 }
 .post-content p code, .comment-content p code {
     display:inline;
@@ -1004,4 +998,18 @@ article.post:after {
 /** Post summary ellipsis **/
 .post-content.summary.auto:after {
     content: '……';
+}
+
+/** Syntax highlighting (adapt to Hugo chroma classes) **/
+.lntable .lntd:first-child {
+  padding-left: .4em;
+}
+.lntable .lntd:last-child {
+  padding-left: .6em;
+  border-left: 1px solid #ddd;
+  width: 100%;
+}
+.lntabl .lntd>pre:last-child {
+  width: 100%;
+  border: none;
 }
