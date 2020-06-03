@@ -65,6 +65,16 @@ PaginatePath = "page"
     name = "关于"
     url = "/about/"
     weight = 4
+
+[markup]
+    [markup.highlight]
+        codeFences = true
+        noClasses = false
+        tabWidth = 4
+        lineNos = true
+    [markup.tableOfContents]
+        ordered = false
+        startLevel = 1
 ```
 
 以上配置示例摘自我自己的博客配置文件。
@@ -80,6 +90,7 @@ PaginatePath = "page"
 - `[params]` 中的 `customCSS` 和 `customJS` 用于加载自定义的 CSS 和 JS
   文件。只需要指定文件名。CSS 从 `static/css` 目录加载，相应地，JS 从 `static/js` 目录加载。
 - 设置中的 `[[menu.main]]` 区块用于设置顶部导航菜单。见下文中的详细说明。
+- `[markup]` 相关配置在 Hugo v0.60.0 及以上版本中应该是必须的。
 
 ## 文章概要
 

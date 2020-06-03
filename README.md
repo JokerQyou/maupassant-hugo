@@ -65,6 +65,16 @@ PaginatePath = "page"
     name = "关于"
     url = "/about/"
     weight = 4
+
+[markup]
+    [markup.highlight]
+        codeFences = true
+        noClasses = false
+        tabWidth = 4
+        lineNos = true
+    [markup.tableOfContents]
+        ordered = false
+        startLevel = 1
 ```
 
 The above configuration was excerpted from my blog.
@@ -82,6 +92,7 @@ The above configuration was excerpted from my blog.
 - `customCSS` and `customJS` in `[params]` are used to load custom CSS and JS
   file. Please use bare filenames. Files will be loaded respectively from `static/js` and `static/css`.
 - `[[menu.main]]` blocks are used to add tab entries to blog navigation area. See detailed usage below.
+- `[markup]` related configuration is required for Hugo v0.60.0 and above.
 
 ## Post summary
 
