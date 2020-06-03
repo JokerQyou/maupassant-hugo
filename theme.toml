@@ -8,11 +8,11 @@ description = ""
 homepage = ""
 tags = ["maupassant"]
 features = []
-min_version = "0.27"
+min_version = "0.60.0"
 
 [author]
   name = "Joker Qyou"
-  homepage = "https://mynook.info"
+  homepage = "https://blog.mynook.info"
 
 # If porting an existing theme
 [original]
