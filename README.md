@@ -128,7 +128,7 @@ author = "My Name"
 
 ## Syntax highlighting
 
-This theme uses built-in Chroma code highlighter, and defaults to [dracula style][chroma_dracula_preview]. You can provide your own `static/css/syntax.css` file to override with your preffered color theme. For example, to change to `monokai` colors:
+This theme uses built-in Chroma code highlighter, and defaults to [dracula style][chroma_dracula_preview]. You can provide your own `static/css/syntax.css` file to override with your preferred color theme. For example, to change to `monokai` colors:
 
 ```bash
 # Make sure you are in the root path of your blog
