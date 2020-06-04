@@ -36,6 +36,10 @@ window.MathJax = {
         }
         // Find outtermost .highlight, insert before that
         var container = pre.closest('.highlight');
+        // Unrecognized (not highlighted) code blocks
+        if (!container) {
+          container = pre;
+        }
         container.parentNode.insertBefore(btn, container);
         btn.addEventListener('click', function() {
           clipboard.writeText(blk.innerText).then(function() {

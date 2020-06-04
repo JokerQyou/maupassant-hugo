@@ -1007,8 +1007,9 @@ article.post:after {
 
 /** Syntax highlighting (adapt to Hugo chroma classes) **/
 pre:not(.chroma) {
-  border: 1px solid #282a36;
+  border: 2px solid #282a36;
   padding: .6em;
+  margin-top: 0;
 }
 .lntable .lntd:first-child {
   padding-left: .4em;
@@ -1032,7 +1033,7 @@ pre:not(.chroma) {
 
 /** Code block copy button **/
 .copy-code {
-    border: 2px solid #272727;
+    border: 2px solid #282a36;
     display: block;
     outline: none;
     margin: auto 0 -2px auto;
