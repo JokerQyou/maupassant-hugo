@@ -21,11 +21,13 @@ window.MathJax = {
 
     // Code block copying
     function initCodeCopy(clipboard) {
+      var icon = '';
       document.querySelectorAll('pre>code').forEach(function(blk) {
         var btn = document.createElement('button');
         btn.className = 'copy-code';
         btn.type = 'buton';
-        btn.innerText = 'Copy';
+        btn.innerText = icon;
+        btn.title = 'Copy';
 
         var pre = blk.parentNode;
         // Skip line number area
@@ -39,10 +41,10 @@ window.MathJax = {
           clipboard.writeText(blk.innerText).then(function() {
             btn.blur();
             btn.innerText = 'Copied!';
-            setTimeout(function() { btn.innerText = 'Copy'; }, 2000);
+            setTimeout(function() { btn.innerText = icon; }, 2000);
           }).catch(function() {
             btn.innerText = 'Failed!';
-            setTimeout(function() { btn.innerText = 'Copy'; }, 2000);
+            setTimeout(function() { btn.innerText = icon; }, 2000);
           });
         });
       });

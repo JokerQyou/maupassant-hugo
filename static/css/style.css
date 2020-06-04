@@ -66,6 +66,9 @@
 .icon-sina-weibo:before {
     content: "\e60d";
 }
+.icon-copy:before {
+    content: "\e60e";
+}
 body {
     background-color:#FFF;
     color:#444;
@@ -376,7 +379,7 @@ textarea {
 .post-content h3 {
     font-size: 1.2em;
 }
-.post-content code {
+.post-content p code, .post-content li code {
     display:inline;
     margin:0 5px;
     padding:3px 5px;
@@ -1027,7 +1030,7 @@ article.post:after {
     margin: auto 0 -2px auto;
     border-radius: 1px;
     padding: 3px 9px;
-    font-family: Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
+    font-family: 'icomoon', Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
     cursor: pointer;
 }
 .copy-code:hover {
