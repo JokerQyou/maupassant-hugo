@@ -52,7 +52,7 @@ window.MathJax = {
       initCodeCopy(navigator.clipboard);
     } else {
       var spt = document.createElement('script');
-      spt.src = 'https://cdn.jsdelivr.net/npm/clipboard-polyfill@2.8.6/dist/clipboard-polyfill.js';
+      spt.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard-polyfill/2.8.6/clipboard-polyfill.js';
       spt.integrity = 'sha256-CXoEMsIBPFOiyA+SLBvD8s5NWUBEqNwOwmeTjHV7/NE=';
       spt.crossOrigin = 'anonymous';
       spt.onload = function() { initCodeCopy(clipboard); };
