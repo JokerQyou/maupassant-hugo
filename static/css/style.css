@@ -381,7 +381,7 @@ textarea {
     padding:3px 5px;
     border: 1px solid #ddd;
 }
-.post-content p {
+.post-content p, .post-content .highlight {
     margin:0 0 1.1em;
 }
 .post-content img {
