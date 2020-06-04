@@ -226,14 +226,13 @@ slug: "test"
 
 # 致谢
 
-以下功能来自 [飞雪无情][rujews_github]：
-
-- 分类列表中显示每个分类的文章数量；
-- RSS 自动发现；
-- 使用 Hugo 菜单实现的导航栏；
-- 存档列表；
-
-他维护了一个包含一些其他功能的 fork，[点此查看][flysnow_maupassant_hugo_github]。
+- 以下功能来自 [飞雪无情][rujews_github]：
+  - 分类列表中显示每个分类的文章数量；
+  - RSS 自动发现；
+  - 使用 Hugo 菜单实现的导航栏；
+  - 存档列表；
+  - 他维护了一个包含一些其他功能的 fork，[点此查看][flysnow_maupassant_hugo_github]。
+- 代码块复制功能基于 [郭亚东的博文][code_copy_post]
 
 [hugo-content-summary]: https://gohugo.io/content-management/summaries/#automatic-summary-splitting
 [utteranc.es]: https://utteranc.es
@@ -241,3 +240,4 @@ slug: "test"
 [flysnow_maupassant_hugo_github]: https://github.com/rujews/maupassant-hugo
 [chroma_dracula_preview]: https://xyproto.github.io/splash/docs/dracula.html
 [chroma_all_styles_preview]: https://xyproto.github.io/splash/docs/all.html
+[code_copy_post]: https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/

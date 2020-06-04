@@ -230,14 +230,13 @@ At last I decided to let go. I want my readers to have privacy. Other Hugo theme
 
 # Credits
 
-Special thanks to [飞雪无情][rujews_github] for the following features:
-
-- Post count in category list;
-- RSS alternate link in `<head>`;
-- Navigation with Hugo menu;
-- Archive list;
-
-He also maintains a fork of this theme with some other features [here][flysnow_maupassant_hugo_github].
+- Special thanks to [飞雪无情][rujews_github] for the following features:
+  - Post count in category list;
+  - RSS alternate link in `<head>`;
+  - Navigation with Hugo menu;
+  - Archive list;
+  - He also maintains a fork of this theme with some other features [here][flysnow_maupassant_hugo_github].
+- Code block copying is based on [Danny Guo's blog post][code_copy_post]
 
 [hugo-content-summary]: https://gohugo.io/content-management/summaries/#automatic-summary-splitting
 [utteranc.es]: https://utteranc.es
@@ -245,3 +244,4 @@ He also maintains a fork of this theme with some other features [here][flysnow_m
 [flysnow_maupassant_hugo_github]: https://github.com/rujews/maupassant-hugo
 [chroma_dracula_preview]: https://xyproto.github.io/splash/docs/dracula.html
 [chroma_all_styles_preview]: https://xyproto.github.io/splash/docs/all.html
+[code_copy_post]: https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/
