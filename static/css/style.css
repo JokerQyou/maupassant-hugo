@@ -376,7 +376,7 @@ textarea {
 .post-content h3 {
     font-size: 1.2em;
 }
-.post-content p code, .comment-content p code {
+.post-content code {
     display:inline;
     margin:0 5px;
     padding:3px 5px;
