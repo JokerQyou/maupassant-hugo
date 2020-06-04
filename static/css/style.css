@@ -1014,3 +1014,21 @@ article.post:after {
   width: 100%;
   border: none;
 }
+.lntable tr {
+  border-top: none !important;
+}
+
+/** Code block copy button **/
+.copy-code {
+    border: 2px solid #272727;
+    display: block;
+    outline: none;
+    margin: auto 0 -2px auto;
+    border-radius: 1px;
+    padding: 3px 9px;
+    font-family: Menlo, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
+    cursor: pointer;
+}
+.copy-code:hover {
+  background-color: #ccc;
+}
