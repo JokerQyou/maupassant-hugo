@@ -93,6 +93,8 @@ The above configuration was excerpted from my blog.
   file. Please use bare filenames. Files will be loaded respectively from `static/js` and `static/css`.
 - `[[menu.main]]` blocks are used to add tab entries to blog navigation area. See detailed usage below.
 - `[markup]` related configuration is required for Hugo v0.60.0 and above.
+  - `codeFences = true` / `noClasses = false` / `lineNos = true` are required for syntax highlighting
+  - `startLevel = 1` is required for table of contents if your section heading uses `h1`
 
 ## Post summary
 
@@ -123,6 +125,21 @@ And no need to indent the lines.
 '''
 author = "My Name"
 ```
+
+## Syntax highlighting
+
+This theme uses built-in Chroma code highlighter, and defaults to [dracula style][chroma_dracula_preview]. You can provide your own `static/css/syntax.css` file to override with your preffered color theme. For example, to change to `monokai` colors:
+
+```bash
+# Make sure you are in the root path of your blog
+# Make sure static assets directory exists
+mkdir -p static/css
+# Generate styles
+hugo gen chromastyles --style=monokai > static/css/syntax.css
+# Notice: if your blog is managed by git, please add and commit static directory
+```
+
+You can view all styles supported by Hugo [here][chroma_all_styles_preview], and change to the one you like using the above steps.
 
 ## Links
 

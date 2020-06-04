@@ -90,7 +90,9 @@ PaginatePath = "page"
 - `[params]` 中的 `customCSS` 和 `customJS` 用于加载自定义的 CSS 和 JS
   文件。只需要指定文件名。CSS 从 `static/css` 目录加载，相应地，JS 从 `static/js` 目录加载。
 - 设置中的 `[[menu.main]]` 区块用于设置顶部导航菜单。见下文中的详细说明。
-- `[markup]` 相关配置在 Hugo v0.60.0 及以上版本中应该是必须的。
+- `[markup]` 相关配置在 Hugo v0.60.0 及以上版本中是必须的。
+  - `codeFences = true` / `noClasses = false` / `lineNos = true` 对于新的代码语法高亮是必须的
+  - `startLevel = 1` 如果你文章内的分段标题使用了 `h1`，那么这个配置是必须的，否则文章内的目录不能显示
 
 ## 文章概要
 
@@ -122,6 +124,21 @@ description = '''
 '''
 author = "我的名字"
 ```
+
+## 代码高亮
+
+本主题使用 Hugo 内置的代码高亮功能，默认使用 [dracula 样式][chroma_dracula_preview]。您可以在博客中提供 `static/css/syntax.css` 文件来覆盖主题自带的样式。例如，要替换为 `monokai` 风格的高亮：
+
+```bash
+# 首先确保您处于博客的根目录中
+# 确保静态文件目录存在
+mkdir -p static/css
+# 生成样式文件
+hugo gen chromastyles --style=monokai > static/css/syntax.css
+# 注意：如果您使用 git 来管理博客，请将 static 目录一并提交
+```
+
+Hugo 内置的所有代码高风格可以[在此处预览][chroma_all_styles_preview]，按以上方法即可自由切换您喜欢的高亮着色风格。
 
 ## 友情链接
 
@@ -220,3 +237,5 @@ slug: "test"
 
 [rujews_github]: https://github.com/rujews
 [flysnow_maupassant_hugo_github]: https://github.com/rujews/maupassant-hugo
+[chroma_dracula_preview]: https://xyproto.github.io/splash/docs/dracula.html
+[chroma_all_styles_preview]: https://xyproto.github.io/splash/docs/all.html
