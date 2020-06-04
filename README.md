@@ -219,6 +219,7 @@ If strict content security policy was configured on your server, please mind tha
 
 - This theme uses MathJax to render mathematical expressions. We’re currently using the official MathJax CDN provided by CLoudflare. You should add `cdnjs.cloudflare.com` to `script-src`. Also to allow MathJax to apply inline styles, `unsafe-inline` should be added to `style-src`.
 - If you’ve enabled utteranc.es comment service, please add `utteranc.es` to `default-src`.
+- The code block copying feature might load a clipboard API polyfill from `cdnjs.cloudflare.com` for old browsers, so be sure to add it to `script-src`.
 
 If you don't know what CSP is, or have never configured one, it's most likely these extra configurations are unnecessary.
 

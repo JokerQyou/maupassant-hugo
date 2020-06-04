@@ -215,6 +215,7 @@ slug: "test"
 
 - 这个主题使用 MathJax 来渲染数学公式，当前使用的是由 Cloudflare 提供的官方 CDN 链接。您需要将 `cdnjs.cloudflare.com` 加入 `script-src`。此外，为了让 MathJax 可以正确地应用 CSS 样式，需要将 `unsafe-inline` 加入 `style-src`。
 - 如果你开启了 utteranc.es 的评论服务，需要将 `utteranc.es` 加入 `default-src`。
+- 在旧的浏览器上（例如QQ浏览器），代码块复制功能会从 `cdnjs.cloudflare.com` 引入一个剪贴板API的 polyfill，因此需要将这个域名加入 `script-src`。
 
 如果你没有配置过 CSP，那么通常情况下无需进行任何操作。
 
