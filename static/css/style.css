@@ -99,6 +99,7 @@ pre, code {
 pre {
     overflow:auto;
     display: block;
+    margin: .6em 0;
 }
 code {
     display: inline-block;
@@ -391,7 +392,7 @@ textarea {
     overflow: auto;
     padding: .5em 2.4em;
     border-radius: 3px;
-    margin:1.8em 0;
+    margin:1em 0;
 }
 .post-content ul li{
     text-indent: .5em;
