@@ -1006,6 +1006,10 @@ article.post:after {
 }
 
 /** Syntax highlighting (adapt to Hugo chroma classes) **/
+pre:not(.chroma) {
+  border: 1px solid #282a36;
+  padding: .6em;
+}
 .lntable .lntd:first-child {
   padding-left: .4em;
 }
