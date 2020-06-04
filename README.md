@@ -243,3 +243,5 @@ He also maintains a fork of this theme with some other features [here][flysnow_m
 [utteranc.es]: https://utteranc.es
 [rujews_github]: https://github.com/rujews
 [flysnow_maupassant_hugo_github]: https://github.com/rujews/maupassant-hugo
+[chroma_dracula_preview]: https://xyproto.github.io/splash/docs/dracula.html
+[chroma_all_styles_preview]: https://xyproto.github.io/splash/docs/all.html

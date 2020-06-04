@@ -96,7 +96,7 @@ PaginatePath = "page"
 
 ## 文章概要
 
-当在首页和各个列表页面中显示文章概要时，主题使用 [Hugo 内置的 `.Summary` 机制](https://gohugo.io/content-management/summaries/#automatic-summary-splitting)。默认情况下每篇文章的前 70 个词被摘录作为概要内容。可以在站点配置文件中使用 `summaryLength` 来修改这个长度。
+当在首页和各个列表页面中显示文章概要时，主题使用 [Hugo 内置的 `.Summary` 机制][hugo-content-summary]。默认情况下每篇文章的前 70 个词被摘录作为概要内容。可以在站点配置文件中使用 `summaryLength` 来修改这个长度。
 
 也可以在文章的 front matter 中使用 `summary` 或 `description` 来手动指定需要显示的概要内容。
 但在使用多行文本时请注意格式，以免造成 front matter 语法错误。参考以下例子。
@@ -190,7 +190,7 @@ slug: "test"
 
 ## 评论
 
-主题支持 [utteranc.es](https://utteranc.es) 评论。使用 `[params.utteranc]` 块来配置。
+主题支持 [utteranc.es][utteranc.es] 评论。使用 `[params.utteranc]` 块来配置。
 
 - `repo` 评论数据存储在 GitHub issue 中，这里指定要使用的**公开** GitHub 仓库的简称，格式是 `用户名/仓库名`
 - `issueTerm` 指定 GitHub issue 与文章的关联方式
@@ -235,6 +235,8 @@ slug: "test"
 
 他维护了一个包含一些其他功能的 fork，[点此查看][flysnow_maupassant_hugo_github]。
 
+[hugo-content-summary]: https://gohugo.io/content-management/summaries/#automatic-summary-splitting
+[utteranc.es]: https://utteranc.es
 [rujews_github]: https://github.com/rujews
 [flysnow_maupassant_hugo_github]: https://github.com/rujews/maupassant-hugo
 [chroma_dracula_preview]: https://xyproto.github.io/splash/docs/dracula.html
