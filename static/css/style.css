@@ -1021,6 +1021,10 @@ article.post:after {
 .lntable tr {
   border-top: none !important;
 }
+:not(.lntd)>.highlight>pre {
+  padding: .6em;
+  margin-top: 0;
+}
 
 /** Code block copy button **/
 .copy-code {
