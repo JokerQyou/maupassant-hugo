@@ -91,7 +91,7 @@ PaginatePath = "page"
   文件。只需要指定文件名。CSS 从 `static/css` 目录加载，相应地，JS 从 `static/js` 目录加载。
 - 设置中的 `[[menu.main]]` 区块用于设置顶部导航菜单。见下文中的详细说明。
 - `[markup]` 相关配置在 Hugo v0.60.0 及以上版本中是必须的。
-  - `codeFences = true` / `noClasses = false` / `lineNos = true` 对于新的代码语法高亮是必须的
+  - `codeFences = true` / `noClasses = false` 对于新的代码语法高亮是必须的
   - `startLevel = 1` 如果你文章内的分段标题使用了 `h1`，那么这个配置是必须的，否则文章内的目录不能显示
 
 ## 文章概要

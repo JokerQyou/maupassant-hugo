@@ -93,7 +93,7 @@ The above configuration was excerpted from my blog.
   file. Please use bare filenames. Files will be loaded respectively from `static/js` and `static/css`.
 - `[[menu.main]]` blocks are used to add tab entries to blog navigation area. See detailed usage below.
 - `[markup]` related configuration is required for Hugo v0.60.0 and above.
-  - `codeFences = true` / `noClasses = false` / `lineNos = true` are required for syntax highlighting
+  - `codeFences = true` / `noClasses = false` are required for syntax highlighting
   - `startLevel = 1` is required for table of contents if your section heading uses `h1`
 
 ## Post summary
