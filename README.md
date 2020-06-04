@@ -238,6 +238,7 @@ At last I decided to let go. I want my readers to have privacy. Other Hugo theme
   - Archive list;
   - He also maintains a fork of this theme with some other features [here][flysnow_maupassant_hugo_github].
 - Code block copying is based on [Danny Guo's blog post][code_copy_post]
+- Icon font is based on [Entypo pictograms by Daniel Bruce][entypo_icons]
 
 [hugo-content-summary]: https://gohugo.io/content-management/summaries/#automatic-summary-splitting
 [utteranc.es]: https://utteranc.es
@@ -246,3 +247,4 @@ At last I decided to let go. I want my readers to have privacy. Other Hugo theme
 [chroma_dracula_preview]: https://xyproto.github.io/splash/docs/dracula.html
 [chroma_all_styles_preview]: https://xyproto.github.io/splash/docs/all.html
 [code_copy_post]: https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/
+[entypo_icons]: http://www.entypo.com/

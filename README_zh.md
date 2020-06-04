@@ -234,6 +234,7 @@ slug: "test"
   - 存档列表；
   - 他维护了一个包含一些其他功能的 fork，[点此查看][flysnow_maupassant_hugo_github]。
 - 代码块复制功能基于 [郭亚东的博文][code_copy_post]
+- 字体图标基于 [Daniel Bruce 的 Entypo+ 图标作品][entypo_icons]
 
 [hugo-content-summary]: https://gohugo.io/content-management/summaries/#automatic-summary-splitting
 [utteranc.es]: https://utteranc.es
@@ -242,3 +243,4 @@ slug: "test"
 [chroma_dracula_preview]: https://xyproto.github.io/splash/docs/dracula.html
 [chroma_all_styles_preview]: https://xyproto.github.io/splash/docs/all.html
 [code_copy_post]: https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/
+[entypo_icons]: http://www.entypo.com/
