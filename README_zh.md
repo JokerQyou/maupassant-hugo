@@ -43,6 +43,10 @@ PaginatePath = "page"
     issueTerm = "url"
     theme = "github-light"
 
+[params.donation.qrcodes]
+    alipay = "alipay_qrcode.png"
+    wechat = "wechat_donation_qrcode.png"
+
 [[params.links]]
     name = "比尔盖子 博客"
     url = "https://tomli.blog/"
@@ -93,6 +97,7 @@ PaginatePath = "page"
 - `[markup]` 相关配置在 Hugo v0.60.0 及以上版本中是必须的。
   - `codeFences = true` / `noClasses = false` 对于新的代码语法高亮是必须的
   - `startLevel = 1` 如果你文章内的分段标题使用了 `h1`，那么这个配置是必须的，否则文章内的目录不能显示
+- `[params.donation.qrcodes]` 用于配置文章的赞赏功能。目前支持支付宝收款码和微信赞赏。
 
 ## 文章概要
 
@@ -139,6 +144,19 @@ hugo gen chromastyles --style=monokai > static/css/syntax.css
 ```
 
 Hugo 内置的所有代码高风格可以[在此处预览][chroma_all_styles_preview]，按以上方法即可自由切换您喜欢的高亮着色风格。
+
+## 赞赏功能
+
+主题实现了简单的二维码赞赏功能，支持支付宝和微信赞赏码。您需要自行保存支付宝收款码和微信赞赏码图片，并存放到博客的 `static` 目录中合适的位置。
+
+```
+[params.donation.qrcodes]
+    alipay = "支付宝二维码在 static 目录中的相对路径，例如 images/alipay.png"
+    wechat = "微信赞赏码在 static 目录中的相对路径"
+```
+
+赞赏方式会显示在博客文章之后、评论栏之前的位置，默认展开。用户可以手动点击将其折叠。
+您可以在文章的 frontmatter 中使用 `donation: false` (YAML) 或 `donation = false` (TOML) 来手动关闭某篇文章的赞赏功能。
 
 ## 友情链接
 

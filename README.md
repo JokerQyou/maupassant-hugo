@@ -43,6 +43,10 @@ PaginatePath = "page"
     issueTerm = "url"
     theme = "github-light"
 
+[params.donation.qrcodes]
+    alipay = "alipay_qrcode.png"
+    wechat = "wechat_donation_qrcode.png"
+
 [[params.links]]
     name = "比尔盖子 博客"
     url = "https://tomli.blog/"
@@ -95,6 +99,7 @@ The above configuration was excerpted from my blog.
 - `[markup]` related configuration is required for Hugo v0.60.0 and above.
   - `codeFences = true` / `noClasses = false` are required for syntax highlighting
   - `startLevel = 1` is required for table of contents if your section heading uses `h1`
+- `[params.donation.qrcodes]` is for donation QR codes. Alipay and Wechat donation code is currently supported.
 
 ## Post summary
 
@@ -140,6 +145,22 @@ hugo gen chromastyles --style=monokai > static/css/syntax.css
 ```
 
 You can view all styles supported by Hugo [here][chroma_all_styles_preview], and change to the one you like using the above steps.
+
+## Donation
+
+This theme includes simple donation feature via QR codes, supporting Alipay and Wechat donation codes.
+You need to save these QR code images to somewhere inside the `static` directory of your site.
+
+```
+[params.donation.qrcodes]
+    alipay = "path of Alipay QR code image, relative to static directory. e.g. images/alipay.png"
+    wechat = "path of Wechat QR code image, relative to static directory."
+```
+
+Donation information will be displayed between the post content and comments.
+QR codes are expanded by default. Users can click a button to collapse them.
+
+You can also disable donation for a specific post, by putting `donation: false` (YAML) or `donation = false` (TOML) into frontmatter of the post.
 
 ## Links
 
