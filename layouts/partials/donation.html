@@ -1,0 +1,26 @@
+{{/** Follow site config: if not configuired, no donation info will ever render **/}}
+{{- .Scratch.Set "donationEnabled" (isset .Site.Params "donation") -}}
+
+{{/** Page frontmatter overrides site config: a page can disable donation infor rendeirng with donation:false **/}}
+{{- if .Scratch.Get "donationEnabled" -}}
+  {{/** `with` cannot distinguish `false` from `nil`, making it useless here. Just compare with `false` for now. **/}}
+  {{- .Scratch.Set "donationEnabled" (ne $.Params.donation false) -}}
+{{- end -}}
+
+{{- if .Scratch.Get "donationEnabled" -}}
+<div id="post-donation">
+  <button id="post-donation-button" title="点击隐藏/显示打赏信息">
+    Donate / 打赏
+  </button>
+  <div id="post-donation-qrcodes">
+    {{- range $key, $image := .Site.Params.donation.qrcodes -}}
+    <div class="post-donation-qrcode {{ $key }}">
+      <img src="{{ $image | absURL}}">
+      {{/** Translations **/}}
+      {{- $ts := dict "alipay" "支付宝" "wechat" "微信赞赏" -}}
+      <p>Via {{ $key | humanize }} / {{ index $ts $key }}</p>
+    </div>
+    {{- end -}}
+  </div>
+</div>
+{{- end -}}

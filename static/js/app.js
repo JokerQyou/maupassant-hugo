@@ -19,6 +19,17 @@ window.MathJax = {
       });
     }
 
+    var id = document.getElementById.bind(document),
+        toggleClass = function (node, cName) {
+          var cl = node.classList;
+          cl.contains(cName) ? (cl.remove(cName)) : (cl.add(cName));
+        };
+    // Donation
+    var dbtn = id('post-donation-button'), dqr = id('post-donation-qrcodes');
+    if(dbtn){
+      dbtn.addEventListener('click', function(e){ toggleClass(dqr, 'hidden') });
+    }
+
     // Code block copying
     function initCodeCopy(clipboard) {
       var icon = '';
